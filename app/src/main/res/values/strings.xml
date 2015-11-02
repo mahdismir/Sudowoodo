@@ -1,0 +1,13 @@
+
+
+<resources>
+    <string name="app_name">Sudowoodo</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Enter</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_display_message">My Message</string>
+    <color name="black">#000000</color>
+
+</resources>
+
