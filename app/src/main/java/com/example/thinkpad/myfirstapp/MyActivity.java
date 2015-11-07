@@ -25,24 +25,9 @@ public class MyActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ImageButton btnNextScreen = (ImageButton) findViewById(R.id.btnNextScreen);
 
-        //listening to button event
-        btnNextScreen.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View arg0){
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
 
-                //Sending data to another Activity
-                //nextScreen.putExtra("name", inputName.getText().toString());
-                //nextScreen.putExtra("email", inputEmail.getText().toString());
 
-                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
-
-                startActivity(nextScreen);
-
-            }
-        });
        // FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         //fab.setOnClickListener(new View.OnClickListener() {
         //    @Override
