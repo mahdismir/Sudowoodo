@@ -13,36 +13,23 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-
-        // Get the message from the intent
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
-
-        // Create the text view
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
-        textView.setText(message);
-
-        // Set the text view as the activity layout
-        setContentView(textView);
-
-
-        //super.onCreate(savedInstanceState);
         //Intent intent = getIntent();
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_display_message);
+    }
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    */}
+    public void sendMessage1(View view) {
+    }
+
+    public void sendMessage2(View view) {
+    }
+
+    public void sendMessage3(View view) {
+    }
+
+    public void sendMessage4(View view) {
+    }
+
 
 }
+
