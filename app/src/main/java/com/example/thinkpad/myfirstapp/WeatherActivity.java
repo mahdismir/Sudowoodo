@@ -48,7 +48,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
         dialog = new ProgressDialog(this);
         dialog.setMessage("Loading...");
         dialog.show();
-        service.refreshWeather("Bell Gardens, CA");
+        service.refreshWeather("San Diego, CA");
     }
 
     /* This function is run when we successfully query the yahoo database for weather info */
