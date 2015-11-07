@@ -2,19 +2,70 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.example.thinkpad.myfirstapp.DisplayMessageActivity">
 
-    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
-        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
-            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:baselineAligned="false"
+        android:clickable="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true">
 
-    </android.support.design.widget.AppBarLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Today&apos;s Weather"
+            android:id="@+id/button1"
+            android:layout_gravity="center_horizontal"
+            android:background="#58cace"
+            android:textStyle="bold|italic"
+            android:onClick="sendMessage1"
+            android:layout_weight=".25" />
 
-    <include layout="@layout/content_display_message" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Add A New Plant"
+            android:id="@+id/button2"
+            android:layout_gravity="center_horizontal"
+            android:background="#58ce6f"
+            android:textStyle="bold|italic"
+            android:onClick="sendMessage2"
+            android:layout_weight=".25" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Watering Schedule"
+            android:id="@+id/button3"
+            android:background="#d79393"
+            android:textStyle="bold|italic"
+            android:onClick="sendMessage3"
+            android:layout_weight=".25" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="List of your Plants"
+            android:id="@+id/button4"
+            android:background="#8f7f82"
+            android:textStyle="bold|italic"
+            android:onClick="sendMessage4"
+            android:layout_weight=".25" />
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
