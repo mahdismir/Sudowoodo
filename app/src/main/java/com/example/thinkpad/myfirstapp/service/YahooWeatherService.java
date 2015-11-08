@@ -40,6 +40,7 @@ public class YahooWeatherService {
                 String endpoint = String.format("https://query.yahooapis.com/v1/public/yql?q=%s&format=json", Uri.encode(YQL));
 
                 try {
+                    //connects to the server
                     URL url = new URL(endpoint);
                     URLConnection connection = url.openConnection();
                     InputStream inputStream = connection.getInputStream();
