@@ -2,14 +2,9 @@ package com.example.thinkpad.myfirstapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -26,6 +21,27 @@ public class DisplayMessageActivity extends AppCompatActivity {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
+
+                //Sending data to another Activity
+                //nextScreen.putExtra("name", inputName.getText().toString());
+                //nextScreen.putExtra("email", inputEmail.getText().toString());
+
+                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
+
+                startActivity(nextScreen);
+
+            }
+        });
+
+
+        /******************************************/
+        /************Add a Plant Button****************/
+        /******************************************/
+        Button btnAddPlant = (Button) findViewById(R.id.btnAddPlant);
+        btnAddPlant.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), AddPlant.class);
 
                 //Sending data to another Activity
                 //nextScreen.putExtra("name", inputName.getText().toString());

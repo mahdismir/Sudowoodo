@@ -39,6 +39,15 @@
             android:label="@string/title_activity_weather"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".AddPlant"
+            android:label="@string/title_activity_button_add_a_new_plant"
+            android:parentActivityName=".DisplayMessageActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.DisplayMessageActivity" />
+        </activity>
     </application>
 
 </manifest>

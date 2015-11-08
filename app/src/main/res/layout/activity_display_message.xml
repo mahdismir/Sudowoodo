@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:text="Add A New Plant"
-            android:id="@+id/button2"
+            android:id="@+id/btnAddPlant"
             android:layout_gravity="center_horizontal"
             android:background="#58ce6f"
             android:textStyle="bold|italic"
