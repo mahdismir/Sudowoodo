@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_display_categories"
+    tools:context="com.example.thinkpad.myfirstapp.DisplayCategories"
+    android:background="@color/brown">
+
+
+    <Button
+        android:layout_gravity="center_vertical"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/moss"
+        android:onClick="sendMessage"
+        android:id="@+id/mossbtn"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moss"
+        android:textSize="30dp"
+        android:id="@+id/textMoss"
+        android:layout_alignTop="@+id/mossbtn"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="220dp"/>
+
+    <Button
+        android:layout_gravity="start"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/conifer"
+        android:onClick="sendMessage"
+        android:id="@+id/coniferbtn"
+        android:layout_marginTop="215dp"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conifer"
+        android:textSize="30dp"
+        android:id="@+id/textconifer"
+        android:layout_alignTop="@+id/mossbtn"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="220dp"/>
+
+
+    <Button
+        android:layout_gravity="start"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/flowering"
+        android:onClick="sendMessage"
+        android:id="@+id/floweringbtn"
+        android:layout_marginTop="415dp"
+        android:layout_marginLeft="15dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flowering"
+        android:textSize="30dp"
+        android:id="@+id/textFlowering"
+        android:layout_alignTop="@+id/mossbtn"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="220dp"/>
+
+
+    <Button
+        android:layout_gravity="start"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/fern"
+        android:onClick="sendMessage"
+        android:id="@+id/fernbtn"
+        android:layout_marginTop="615dp"
+        android:layout_marginLeft="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fern"
+        android:textSize="30dp"
+        android:id="@+id/textFern"
+        android:layout_alignTop="@+id/mossbtn"
+        android:layout_marginTop="670dp"
+        android:layout_marginLeft="220dp"/>
+
+
+</RelativeLayout>
