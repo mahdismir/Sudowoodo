@@ -9,7 +9,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +22,8 @@ import com.example.thinkpad.myfirstapp.data.Channel;
 import com.example.thinkpad.myfirstapp.data.Item;
 import com.example.thinkpad.myfirstapp.service.WeatherServiceCallback;
 import com.example.thinkpad.myfirstapp.service.YahooWeatherService;
+
+import org.w3c.dom.Text;
 
 public class WeatherActivity extends AppCompatActivity implements WeatherServiceCallback {
 
@@ -35,7 +41,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-
+        final String defaultLocation = "San Diego, CA";
         /* instantiate the instance variables */
         weatherIconImageView = (ImageView)findViewById(R.id.weatherIconImageView);
         temperatureTextView = (TextView)findViewById(R.id.temperatureTextView);
@@ -48,7 +54,32 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
         dialog = new ProgressDialog(this);
         dialog.setMessage("Loading...");
         dialog.show();
-        service.refreshWeather("Torreon, CO");
+        service.refreshWeather(defaultLocation);
+        //capture user city FORMAT: "City, State" Ex: "Los Angeles, CA"
+        //Obtain a references to views desired
+        final EditText editLocation = (EditText) findViewById(R.id.locationInput);
+        final TextView locationView = (TextView)findViewById(R.id.locationTextView);
+
+        //set an onclick listener when the user updates the location field
+        editLocation.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                //get the new input
+                String location = editLocation.getText().toString();
+                //resent the query on new input received
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    changeCity(location);
+                    //clear the old input
+                    editLocation.setText("");
+                    return false;
+                }
+                return false;
+            }
+        });
+
+    }
+    public void changeCity(String city){
+        service.refreshWeather(city);
     }
 
     /* This function is run when we successfully query the yahoo database for weather info */

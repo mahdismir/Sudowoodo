@@ -1,5 +1,6 @@
 package com.example.thinkpad.myfirstapp;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,10 +25,18 @@ public class MyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*************************************************/
+        /**************FORCE PORTRAIT MODE****************/
+        /*************************************************/
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_my);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        /******************************************************/
+        /**************parse database stuff WIP****************/
+        /******************************************************/
         // Enable Local Datastore for user/plant management
         Parse.enableLocalDatastore(this);
         Parse.initialize(this, "QR0kncaDZr4y8jxbOwqBOiPGghhRm1UKPiXA4Jl3", "EHuNBEuSo3qkBaxMgPdp5NxqH9bwJztDNyglmIk6");
@@ -79,5 +88,11 @@ public class MyActivity extends AppCompatActivity {
         //intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+
+    /************************************************/
+    /***************SAVED STATE CODE*****************/
+    /************************************************/
+    //@Override
+    //protected void OnSave
 }
 

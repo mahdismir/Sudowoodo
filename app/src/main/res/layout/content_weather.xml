@@ -61,4 +61,18 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="37dp" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/locationInput"
+        android:layout_marginTop="79dp"
+        android:imeOptions="actionDone"
+        android:hint="City, State"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:layout_below="@+id/locationTextView"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
