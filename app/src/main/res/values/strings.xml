@@ -18,6 +18,10 @@
     <string name="conifer">conifer</string>
     <string name="moss">Moss</string>
     <string name="displaycategories">Choose you plant from the categories:</string>
+    <string name="title_activity_add_moss">AddMoss</string>
+    <string name="title_activity_add_conifer">AddConifer</string>
+    <string name="title_activity_add_flowering">AddFlowering</string>
+    <string name="title_activity_add_fern">AddFern</string>
 
 </resources>
 

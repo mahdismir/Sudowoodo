@@ -49,6 +49,42 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.DisplayMessageActivity" />
         </activity>
+        <activity
+            android:name=".AddMoss"
+            android:label="@string/title_activity_add_moss"
+            android:parentActivityName=".AddPlant"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+        </activity>
+        <activity
+            android:name=".AddConifer"
+            android:label="@string/title_activity_add_conifer"
+            android:parentActivityName=".AddPlant"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+        </activity>
+        <activity
+            android:name=".AddFlowering"
+            android:label="@string/title_activity_add_flowering"
+            android:parentActivityName=".AddPlant"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+        </activity>
+        <activity
+            android:name=".AddFern"
+            android:label="@string/title_activity_add_fern"
+            android:parentActivityName=".AddPlant"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+        </activity>
     </application>
 
 </manifest>

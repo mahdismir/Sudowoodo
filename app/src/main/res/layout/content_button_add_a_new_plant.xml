@@ -9,7 +9,14 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_display_categories"
     tools:context="com.example.thinkpad.myfirstapp.DisplayCategories"
-    android:background="@color/brown">
+    android:background="#58ce6f">
+
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
 
     <Button
@@ -27,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Moss"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:id="@+id/textMoss"
         android:layout_alignTop="@+id/mossbtn"
         android:layout_marginTop="70dp"
@@ -47,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Conifer"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:id="@+id/textconifer"
         android:layout_alignTop="@+id/mossbtn"
         android:layout_marginTop="270dp"
@@ -60,7 +67,7 @@
         android:layout_height="180dp"
         android:background="@drawable/flowering"
         android:onClick="sendMessage"
-        android:id="@+id/floweringbtn"
+        android:id="@+id/Floweringbtn"
         android:layout_marginTop="415dp"
         android:layout_marginLeft="15dp" />
 
@@ -69,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Flowering"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:id="@+id/textFlowering"
         android:layout_alignTop="@+id/mossbtn"
         android:layout_marginTop="470dp"
@@ -82,18 +89,19 @@
         android:layout_height="180dp"
         android:background="@drawable/fern"
         android:onClick="sendMessage"
-        android:id="@+id/fernbtn"
+        android:id="@+id/Fernbtn"
         android:layout_marginTop="615dp"
         android:layout_marginLeft="15dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fern"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:id="@+id/textFern"
         android:layout_alignTop="@+id/mossbtn"
         android:layout_marginTop="670dp"
         android:layout_marginLeft="220dp"/>
 
-
+    </RelativeLayout>
+</ScrollView>
 </RelativeLayout>
