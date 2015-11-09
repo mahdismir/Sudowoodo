@@ -14,6 +14,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.parse.Parse;
+import com.parse.ParseObject;
+
 public class MyActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
 
@@ -25,17 +28,26 @@ public class MyActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Enable Local Datastore for user/plant management
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this, "QR0kncaDZr4y8jxbOwqBOiPGghhRm1UKPiXA4Jl3", "EHuNBEuSo3qkBaxMgPdp5NxqH9bwJztDNyglmIk6");
+
+
+        //parse test code
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("foo", "bar");
+        testObject.saveInBackground();
 
 
 
-       // FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        // FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         //fab.setOnClickListener(new View.OnClickListener() {
         //    @Override
         //    public void onClick(View view) {
         //        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
         //                .setAction("Action", null).show();
         //    }
-       // });
+        // });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
