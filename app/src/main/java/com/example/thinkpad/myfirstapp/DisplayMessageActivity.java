@@ -53,6 +53,45 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
             }
         });
+        /****************************************************/
+        /************Watering Schedule Button****************/
+        /****************************************************/
+        Button btnWateringScheduleActivity = (Button) findViewById(R.id.wateringSchedule);
+        btnWateringScheduleActivity.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), WateringScheduleActivity.class);
+
+                //Sending data to another Activity
+                //nextScreen.putExtra("name", inputName.getText().toString());
+                //nextScreen.putExtra("email", inputEmail.getText().toString());
+
+                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
+
+                startActivity(nextScreen);
+
+            }
+        });
+        /*********************************************/
+        /************Plant List Button****************/
+        /*********************************************/
+        Button btnPlantListActivity = (Button) findViewById(R.id.plantList);
+        btnPlantListActivity.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), PlantListActivity.class);
+
+                //Sending data to another Activity
+                //nextScreen.putExtra("name", inputName.getText().toString());
+                //nextScreen.putExtra("email", inputEmail.getText().toString());
+
+                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
+
+                startActivity(nextScreen);
+
+            }
+        });
+
     }
 
     public void sendMessage1(View view) {

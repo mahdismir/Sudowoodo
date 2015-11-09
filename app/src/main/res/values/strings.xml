@@ -9,6 +9,8 @@
     <string name="title_activity_display_message">My Message</string>
     <color name="black">#000000</color>
     <string name="title_activity_weather">WeatherActivity</string>
+    <string name="title_activity_water_schedule">WaterSchedule</string>
+    <string name="title_activity_plant_list">PlantList</string>
     <string name="location">Location</string>
     <string name="condition">Condition</string>
     <string name="temperature">Temperature</string>

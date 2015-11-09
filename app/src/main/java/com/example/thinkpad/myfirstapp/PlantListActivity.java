@@ -1,4 +1,4 @@
-package com.example.saif.myapplication;
+package com.example.thinkpad.myfirstapp;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -31,7 +31,7 @@ public class PlantListActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_plant_list, menu);
+        //getMenuInflater().inflate(R.menu.menu_plant_list, menu);
         return true;
     }
 

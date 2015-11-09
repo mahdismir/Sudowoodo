@@ -16,6 +16,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
+        /* TITLE SCREEN */
         <activity
             android:name=".MyActivity"
             android:label="@string/app_name"
@@ -28,6 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        /* MENU SCREEN*/
         <activity
             android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
@@ -38,12 +42,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.MyActivity" />
         </activity>
+
+        /* MENU 1: WEATHER ACTIVITY */
         <activity
             android:name=".WeatherActivity"
             android:label="@string/title_activity_weather"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
+        /* MENU 2:  ADD A PLANT ACTIVITY */
         <activity
             android:name=".AddPlant"
             android:label="@string/title_activity_button_add_a_new_plant"
@@ -54,6 +62,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.DisplayMessageActivity" />
         </activity>
+
+
         <activity
             android:name=".AddMoss"
             android:label="@string/title_activity_add_moss"
@@ -85,6 +95,30 @@
             android:name=".AddFern"
             android:label="@string/title_activity_add_fern"
             android:parentActivityName=".AddPlant"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+        </activity>
+
+        /*((((((((((END ADD PLANT OPTIONS)))))))))))))*/
+
+        /* WATERING SCHEDULE ACTIVITY */
+        <activity
+            android:name=".WateringScheduleActivity"
+            android:label="@string/title_activity_water_schedule"
+            android:parentActivityName=".DisplayMessageActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+        </activity>
+
+        /* PLANT LIST ACTIVITY */
+        <activity
+            android:name=".PlantListActivity"
+            android:label="@string/title_activity_plant_list"
+            android:parentActivityName=".DisplayMessageActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
