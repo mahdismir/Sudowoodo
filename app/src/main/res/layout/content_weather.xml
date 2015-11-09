@@ -8,7 +8,8 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_weather"
-    tools:context="com.example.thinkpad.myfirstapp.WeatherActivity">
+    tools:context="com.example.thinkpad.myfirstapp.WeatherActivity"
+    android:background="#58cace">
 
 
     <ImageView
@@ -69,10 +70,12 @@
         android:id="@+id/locationInput"
         android:layout_marginTop="79dp"
         android:imeOptions="actionDone"
-        android:hint="City, State"
+        android:hint="City, State/Country"
         android:textAlignment="center"
         android:singleLine="true"
         android:layout_below="@+id/locationTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="#58cace"
+        android:textSize="25dp" />
 
 </RelativeLayout>

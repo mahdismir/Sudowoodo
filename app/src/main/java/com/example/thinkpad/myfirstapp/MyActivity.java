@@ -28,7 +28,9 @@ public class MyActivity extends AppCompatActivity {
         /*************************************************/
         /**************FORCE PORTRAIT MODE****************/
         /*************************************************/
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //Mitch: I changed all of the activities in the manifest
+        //to only display in portrait mode. (See activity manifest file)
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_my);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -80,7 +82,9 @@ public class MyActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /** Called when the user clicks the Send button */
+    /******************************************************/
+    /***********DISPLAY MAIN MENU ACTIVITY*****************/
+    /******************************************************/
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
