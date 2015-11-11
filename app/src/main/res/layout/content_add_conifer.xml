@@ -10,4 +10,14 @@
     tools:showIn="@layout/activity_add_conifer"
     tools:context="com.example.thinkpad.myfirstapp.AddConifer">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="103dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="122dp" />
 </RelativeLayout>
