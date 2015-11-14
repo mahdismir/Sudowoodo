@@ -2,10 +2,7 @@ package com.example.thinkpad.myfirstapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
@@ -24,11 +21,11 @@ public class AddPlant extends AppCompatActivity {
 
 
 
-        Button btnAddMoss = (Button) findViewById(R.id.mossbtn);
-        btnAddMoss.setOnClickListener(new View.OnClickListener() {
+        Button btnAddTemperate = (Button) findViewById(R.id.temperatebtn);
+        btnAddTemperate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), AddMoss.class);
+                Intent nextScreen = new Intent(getApplicationContext(), AddTemperate.class);
 
                 //Sending data to another Activity
                 //nextScreen.putExtra("name", inputName.getText().toString());
@@ -42,31 +39,11 @@ public class AddPlant extends AppCompatActivity {
         });
 
 
-        Button btnAddConifer = (Button) findViewById(R.id.coniferbtn);
-        btnAddConifer.setOnClickListener(new View.OnClickListener() {
+        Button btnAddDesert = (Button) findViewById(R.id.desertbtn);
+        btnAddDesert.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), AddConifer.class);
-
-                //Sending data to another Activity
-                //nextScreen.putExtra("name", inputName.getText().toString());
-                //nextScreen.putExtra("email", inputEmail.getText().toString());
-
-                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
-
-                startActivity(nextScreen);
-
-            }
-        });
-
-
-
-
-        Button btnAddFlowering = (Button) findViewById(R.id.Floweringbtn);
-        btnAddFlowering.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), AddFlowering.class);
+                Intent nextScreen = new Intent(getApplicationContext(), AddDesert.class);
 
                 //Sending data to another Activity
                 //nextScreen.putExtra("name", inputName.getText().toString());
@@ -81,11 +58,12 @@ public class AddPlant extends AppCompatActivity {
 
 
 
-        Button btnAddFern = (Button) findViewById(R.id.Fernbtn);
-        btnAddFern.setOnClickListener(new View.OnClickListener() {
+
+        Button btnAddCool = (Button) findViewById(R.id.coolbtn);
+        btnAddCool.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), AddFern.class);
+                Intent nextScreen = new Intent(getApplicationContext(), AddCool.class);
 
                 //Sending data to another Activity
                 //nextScreen.putExtra("name", inputName.getText().toString());
@@ -97,18 +75,27 @@ public class AddPlant extends AppCompatActivity {
 
             }
         });
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-  /*      MossButton = (Button)findViewById(R.id.mossbtn);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+
+
+        Button btnAddTropical = (Button) findViewById(R.id.Tropicalbtn);
+        btnAddTropical.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), AddTropical.class);
+
+                //Sending data to another Activity
+                //nextScreen.putExtra("name", inputName.getText().toString());
+                //nextScreen.putExtra("email", inputEmail.getText().toString());
+
+                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
+
+                startActivity(nextScreen);
+
             }
-        });*/
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        });
+
+
     }
 
 }

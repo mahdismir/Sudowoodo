@@ -16,21 +16,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-
         /* TITLE SCREEN */
         <activity
             android:name=".MyActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         /* MENU SCREEN*/
         <activity
             android:name=".DisplayMessageActivity"
@@ -42,7 +39,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.MyActivity" />
         </activity>
-
         /* MENU 1: WEATHER ACTIVITY */
         <activity
             android:name=".WeatherActivity"
@@ -50,7 +46,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-
         /* MENU 2:  ADD A PLANT ACTIVITY */
         <activity
             android:name=".AddPlant"
@@ -62,10 +57,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.DisplayMessageActivity" />
         </activity>
-
-
         <activity
-            android:name=".AddMoss"
+            android:name=".AddTemperate"
             android:label="@string/title_activity_add_moss"
             android:parentActivityName=".AddPlant"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -74,7 +67,7 @@
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
         <activity
-            android:name=".AddConifer"
+            android:name=".AddDesert"
             android:label="@string/title_activity_add_conifer"
             android:parentActivityName=".AddPlant"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -83,7 +76,7 @@
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
         <activity
-            android:name=".AddFlowering"
+            android:name=".AddCool"
             android:label="@string/title_activity_add_flowering"
             android:parentActivityName=".AddPlant"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -92,7 +85,7 @@
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
         <activity
-            android:name=".AddFern"
+            android:name=".AddTropical"
             android:label="@string/title_activity_add_fern"
             android:parentActivityName=".AddPlant"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -100,7 +93,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
-
         /*((((((((((END ADD PLANT OPTIONS)))))))))))))*/
 
         /* WATERING SCHEDULE ACTIVITY */
@@ -113,7 +105,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
-
         /* PLANT LIST ACTIVITY */
         <activity
             android:name=".PlantListActivity"
@@ -123,6 +114,45 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+        </activity>
+        <activity
+            android:name=".CoolPopUp"
+            android:label="@string/title_activity_cool_pop_up"
+            android:parentActivityName=".AddCool"
+            android:theme="@style/AppTheme.CustomeTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddCool" />
+        </activity>
+        <activity
+            android:name=".DesertPopUp"
+            android:label="@string/title_activity_desert_pop_up"
+            android:parentActivityName=".AddDesert"
+            android:theme="@style/AppTheme.CustomeTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddDesert" />
+        </activity>
+        <activity
+            android:name=".TemperatePopUp"
+            android:label="@string/title_activity_temperate_pop_up"
+            android:parentActivityName=".AddTemperate"
+            android:theme="@style/AppTheme.CustomeTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddTemperate" />
+        </activity>
+        <activity
+            android:name=".TropicalPopUp"
+            android:label="@string/title_activity_tropical_pop_up"
+            android:parentActivityName=".AddTropical"
+            android:theme="@style/AppTheme.CustomeTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.AddTropical" />
         </activity>
     </application>
 

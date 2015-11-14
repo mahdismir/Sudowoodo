@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context="com.example.saif.myapplication.WateringScheduleActivity">
+    tools:context="com.example.thinkpad.myfirstapp.AddTropical">
 
     <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
         android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
@@ -15,7 +15,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-<include layout="@layout/content_watering_schedule" />
-
+    <include layout="@layout/content_add_tropical" />
 
 </android.support.design.widget.CoordinatorLayout>

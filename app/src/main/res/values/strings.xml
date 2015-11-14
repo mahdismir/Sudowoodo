@@ -24,6 +24,12 @@
     <string name="title_activity_add_conifer">AddConifer</string>
     <string name="title_activity_add_flowering">AddFlowering</string>
     <string name="title_activity_add_fern">AddFern</string>
+    <string name="coolinfo">Water thoroughly 3x a week if they are planted in a garden.\n If the weather is dry, then you’ll have to water more frequently by watering every other day.
+</string>
+    <string name="title_activity_cool_pop_up">CoolPopUp</string>
+    <string name="title_activity_desert_pop_up">DesertPopUp</string>
+    <string name="title_activity_temperate_pop_up">TemperatePopUp</string>
+    <string name="title_activity_tropical_pop_up">TropicalPopUp</string>
 
 </resources>
 
