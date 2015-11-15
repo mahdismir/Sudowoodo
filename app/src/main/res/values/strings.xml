@@ -24,12 +24,22 @@
     <string name="title_activity_add_conifer">AddConifer</string>
     <string name="title_activity_add_flowering">AddFlowering</string>
     <string name="title_activity_add_fern">AddFern</string>
-    <string name="coolinfo">Water thoroughly 3x a week if they are planted in a garden.\n If the weather is dry, then you’ll have to water more frequently by watering every other day.
-</string>
+
     <string name="title_activity_cool_pop_up">CoolPopUp</string>
     <string name="title_activity_desert_pop_up">DesertPopUp</string>
     <string name="title_activity_temperate_pop_up">TemperatePopUp</string>
     <string name="title_activity_tropical_pop_up">TropicalPopUp</string>
+    <string name="TemperateInfo">Every other day.  Every day if weather is really dry or hot.</string>
+    <string name="TropicalInfo">Hibiscus plants require consistently moist soil to produce the most blooms.
+                                Water hibiscus plants at least once a day, except on rainy days, making certain
+                                to saturate the soil around the root ball completely. Increase watering to twice
+                                or three times a day when temperatures exceed 80 degrees Fahrenheit.</string>
+    <string name="coolInfo">Water thoroughly 3x a week if they are planted in a garden. If the weather is dry,
+                            then you’ll have to water more frequently by watering every other day.</string>
+    <string name="DesertInfo">During extremely hot weather, some cacti may need to be watered 2 - 3 times per week,
+                          depending on the dryness of the soil. During winter months, watering plants every 2 weeks
+                          should be sufficient. Let soil dry out between watering. (Indoors) During winter months or
+                          when plant is dormant, water once a month.</string>
 
 </resources>
 

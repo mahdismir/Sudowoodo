@@ -1,5 +1,6 @@
 package com.example.thinkpad.myfirstapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.Button;
 
 public class DesertPopUp extends AppCompatActivity {
 
@@ -25,6 +27,16 @@ public class DesertPopUp extends AppCompatActivity {
         int height = dm.heightPixels;
 
         getWindow().setLayout((int) (width * .6), (int) (height * .4));
+
+        Button cancelbutton = (Button) findViewById(R.id.CancelonPopUp);
+        cancelbutton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), AddDesert.class);
+                finish();
+
+            }
+        });
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

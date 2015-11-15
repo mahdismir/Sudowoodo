@@ -13,7 +13,7 @@
 
 
     <TextView
-        android:text="info"
+        android:text="@string/coolInfo"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
         android:layout_width="wrap_content"

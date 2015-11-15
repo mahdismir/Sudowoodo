@@ -12,7 +12,7 @@
     android:background="#58ce6f">
 
     <TextView
-        android:text="info"
+        android:text="@string/TropicalInfo"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
         android:layout_width="wrap_content"

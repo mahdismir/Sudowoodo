@@ -18,9 +18,6 @@ public class AddPlant extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_button_add_a_new_plant);
 
-
-
-
         Button btnAddTemperate = (Button) findViewById(R.id.temperatebtn);
         btnAddTemperate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
