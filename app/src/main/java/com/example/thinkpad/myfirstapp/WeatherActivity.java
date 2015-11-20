@@ -29,9 +29,9 @@ import org.w3c.dom.Text;
 
 public class WeatherActivity extends AppCompatActivity implements WeatherServiceCallback {
 
-
+    //Changed default city to Austin Tx
     private String USER_CITY;
-    private String DEFAULT_CITY = "San Diego, CA";
+    private String DEFAULT_CITY = "Austin, TX";
     private ImageView weatherIconImageView;
     private TextView temperatureTextView;
     private TextView conditionTextView;
