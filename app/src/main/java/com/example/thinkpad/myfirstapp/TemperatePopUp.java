@@ -27,15 +27,26 @@ public class TemperatePopUp extends AppCompatActivity {
         int height = dm.heightPixels;
 
         getWindow().setLayout((int) (width * .6), (int) (height * .4));
-        Button cancelbutton = (Button) findViewById(R.id.CancelonPopUp);
+        Button cancelbutton = (Button) findViewById(R.id.CancelonPopUpTemperate);
         cancelbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
+                // Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), AddTemperate.class);
                 finish();
-
             }
         });
+
+        Button addPlantButton = (Button) findViewById(R.id.AddonPopUpTemperate);
+        addPlantButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0){
+                // Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), Plant.class);
+                startActivity(nextScreen);
+            }
+        });
+
+
+
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

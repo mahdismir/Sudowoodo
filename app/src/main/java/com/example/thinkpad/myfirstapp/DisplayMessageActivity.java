@@ -32,7 +32,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
                 //Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
 
                 //changed to this for parse testing stuff
-                Intent nextScreen = new Intent(getApplicationContext(), TestAddAPlant.class);
+                Intent nextScreen = new Intent(getApplicationContext(), Plant.class);
 
 
                 //Sending data to another Activity

@@ -44,7 +44,7 @@
         android:layout_gravity="start"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:background="@drawable/desert"
+        android:background="@drawable/fern"
         android:onClick="sendMessage"
         android:id="@+id/desertbtn"
         android:layout_marginTop="215dp"

@@ -44,11 +44,6 @@ public class MyActivity extends AppCompatActivity {
         Parse.initialize(this, "QR0kncaDZr4y8jxbOwqBOiPGghhRm1UKPiXA4Jl3", "EHuNBEuSo3qkBaxMgPdp5NxqH9bwJztDNyglmIk6");
 
 
-        //parse test code
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
-
 
 
         // FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

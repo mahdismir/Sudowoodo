@@ -28,13 +28,22 @@ public class DesertPopUp extends AppCompatActivity {
 
         getWindow().setLayout((int) (width * .6), (int) (height * .4));
 
-        Button cancelbutton = (Button) findViewById(R.id.CancelonPopUp);
+        Button cancelbutton = (Button) findViewById(R.id.CancelonPopUpDesert);
         cancelbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), AddDesert.class);
                 finish();
 
+            }
+        });
+
+        Button addPlantButton = (Button) findViewById(R.id.AddonPopUpDesert);
+        addPlantButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0){
+                // Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), Plant.class);
+                startActivity(nextScreen);
             }
         });
 

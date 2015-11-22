@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
-        android:id="@+id/AddonPopUp"
+        android:id="@+id/AddonPopUpCool"
         android:layout_below="@+id/TextonPopUp"
         android:layout_toLeftOf="@+id/TextonPopUp"
         android:layout_toStartOf="@+id/TextonPopUp" />
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"
-        android:id="@+id/CancelonPopUp"
+        android:id="@+id/CancelonPopUpCool"
         android:layout_toRightOf="@+id/TextonPopUp"
         android:layout_toEndOf="@+id/TextonPopUp"
         android:layout_alignBottom="@+id/AddonPopUp"

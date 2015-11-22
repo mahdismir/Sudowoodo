@@ -25,7 +25,7 @@ public class CoolPopUp extends AppCompatActivity {
 
         getWindow().setLayout((int)(width*.6),(int)(height*.4));
 
-        Button cancelbutton = (Button) findViewById(R.id.CancelonPopUp);
+        Button cancelbutton = (Button) findViewById(R.id.CancelonPopUpCool);
         cancelbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
@@ -34,6 +34,22 @@ public class CoolPopUp extends AppCompatActivity {
 
             }
         });
+
+
+        Button addPlantButton = (Button) findViewById(R.id.AddonPopUpCool);
+        addPlantButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0){
+                // Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), Plant.class);
+                startActivity(nextScreen);
+            }
+        });
+
+
+
+
+
+
        /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

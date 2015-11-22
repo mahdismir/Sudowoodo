@@ -8,11 +8,6 @@ import android.widget.Button;
 
 public class AddPlant extends AppCompatActivity {
 
-
-    private Button MossButton;
-    private Button FernButton;
-    private Button coniferButton;
-    private Button floweringButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +47,6 @@ public class AddPlant extends AppCompatActivity {
 
             }
         });
-
 
 
 
