@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.thinkpad.myfirstapp.test.TestAddAPlant;
+
 public class DisplayMessageActivity extends AppCompatActivity {
 
     @Override
@@ -20,7 +22,14 @@ public class DisplayMessageActivity extends AppCompatActivity {
         btnWeatherScreen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
+
+
+                /****************************/
+                /* ADD A PLANT TESTING STUFF */
+                /****************************/
+                //Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
+                Intent nextScreen = new Intent(getApplicationContext(), TestAddAPlant.class);
+
 
                 //Sending data to another Activity
                 //nextScreen.putExtra("name", inputName.getText().toString());

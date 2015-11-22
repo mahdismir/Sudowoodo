@@ -40,6 +40,21 @@
                           depending on the dryness of the soil. During winter months, watering plants every 2 weeks
                           should be sufficient. Let soil dry out between watering. (Indoors) During winter months or
                           when plant is dormant, water once a month.</string>
+    <string name="title_activity_add_plant_test">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_test_add_aplant">TestAddAPlant</string>
 
 </resources>
 
