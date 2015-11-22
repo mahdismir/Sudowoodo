@@ -160,7 +160,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.AddTropical" />
         </activity>
-
         /**************************************************************/
         /*******TESTING STUFF******************************************/
         /**************************************************************/
@@ -168,11 +167,43 @@
             android:name=".test.TestAddAPlant"
             android:label="@string/title_activity_test_add_aplant"
             android:theme="@style/AppTheme.NoActionBar" >
-    </activity>
-
-
-
-
+        </activity>
+        <activity
+            android:name=".WaterCool"
+            android:label="@string/title_activity_water_cool"
+            android:parentActivityName=".WateringScheduleActivity"
+            android:theme="@style/AppTheme.CustomeTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.WateringScheduleActivity" />
+        </activity>
+        <activity
+            android:name=".WaterTemperate"
+            android:label="@string/title_activity_water_temperate"
+            android:parentActivityName=".WateringScheduleActivity"
+            android:theme="@style/AppTheme.CustomeTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.WateringScheduleActivity" />
+        </activity>
+        <activity
+            android:name=".WaterTropical"
+            android:label="@string/title_activity_water_tropical"
+            android:parentActivityName=".WateringScheduleActivity"
+            android:theme="@style/AppTheme.CustomeTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.WateringScheduleActivity" />
+        </activity>
+        <activity
+            android:name=".WaterDesert"
+            android:label="@string/title_activity_water_desert"
+            android:parentActivityName=".WateringScheduleActivity"
+            android:theme="@style/AppTheme.CustomeTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.WateringScheduleActivity" />
+        </activity>
     </application>
 
 </manifest>

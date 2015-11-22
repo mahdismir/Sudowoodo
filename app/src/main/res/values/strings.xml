@@ -55,6 +55,10 @@
         completions."
     </string>
     <string name="title_activity_test_add_aplant">TestAddAPlant</string>
+    <string name="title_activity_water_cool">WaterCool</string>
+    <string name="title_activity_water_temperate">WaterTemperate</string>
+    <string name="title_activity_water_tropical">WaterTropical</string>
+    <string name="title_activity_water_desert">WaterDesert</string>
 
 </resources>
 

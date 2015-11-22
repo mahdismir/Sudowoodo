@@ -27,6 +27,7 @@ public class TemperatePopUp extends AppCompatActivity {
         int height = dm.heightPixels;
 
         getWindow().setLayout((int) (width * .6), (int) (height * .4));
+
         Button cancelbutton = (Button) findViewById(R.id.CancelonPopUpTemperate);
         cancelbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {

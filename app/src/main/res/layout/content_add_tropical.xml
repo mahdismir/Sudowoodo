@@ -11,6 +11,12 @@
     tools:context="com.example.thinkpad.myfirstapp.AddTropical"
     android:background="#58ce6f">
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
     <TextView
         android:text="@string/TropicalInfo"
         android:textSize="30dp"
@@ -30,5 +36,7 @@
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="183dp" />
+            </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
