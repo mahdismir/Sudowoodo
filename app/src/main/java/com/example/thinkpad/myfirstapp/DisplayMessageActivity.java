@@ -27,7 +27,11 @@ public class DisplayMessageActivity extends AppCompatActivity {
                 /****************************/
                 /* ADD A PLANT TESTING STUFF */
                 /****************************/
+
+                // This is what is used to do
                 //Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
+
+                //changed to this for parse testing stuff
                 Intent nextScreen = new Intent(getApplicationContext(), TestAddAPlant.class);
 
 
