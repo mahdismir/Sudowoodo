@@ -1,31 +1,63 @@
 package com.example.thinkpad.myfirstapp;
 
+import android.app.ListActivity;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
-public class PlantListActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class PlantListActivity extends ListActivity {
+    // Declare Variables
+    List<String> listOfPlants = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plant_list);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        //Log.d("TEST", Integer.toString(plantList.size()));
+        final ParseUser currentUser = ParseUser.getCurrentUser();
+        String username = currentUser.getString("username");
+        ParseQuery query = new ParseQuery(username+"_Plants");
+        query.whereEqualTo("Owner", username);
+        query.findInBackground(new FindCallback<ParseObject>() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void done(java.util.List<ParseObject> objects,
+                             ParseException e) {
+                listOfPlants.add(currentUser.getString("username")+"'s plants");
+                if (e == null) {
+                    Log.d("TEST", "Retrieved " + objects.size() + " owner plants.");
+                    for (ParseObject curPlant : objects) {
+                        //construct the plant
+                        //get the nickname
+                        String nickname = (String) curPlant.get("Nickname");
+                        String type = (String) curPlant.get("Type");
+                        String temp = "Plant: " + nickname + " ---- Type: " + type;
+                        Log.d("TEST", "ADDING " + temp);
+                        listOfPlants.add(temp);
+                        //Log.d("TEST", "Plant List Size: " + Integer.toString(listOfPlants.size()));
+                    }
+                } else {
+                    Log.d("OWNER", "Error: " + e.getMessage());
+                }
+                Log.d("TEST", "Plant List Size: " + Integer.toString(listOfPlants.size()));
+                String[] arr = listOfPlants.toArray(new String[listOfPlants.size()]);
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(getListView().getContext(),
+                        android.R.layout.simple_list_item_1, arr);
+                getListView().setAdapter(adapter);
             }
-        });*/
+        });
+
     }
 
     @Override

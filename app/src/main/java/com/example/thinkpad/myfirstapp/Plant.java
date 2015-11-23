@@ -1,6 +1,7 @@
 package com.example.thinkpad.myfirstapp;
 
 import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 /**
  * Created by Mitch & Vince on 11/21/2015.
@@ -9,17 +10,29 @@ public class Plant {
     int lastWatered;
     String type;
     String nickname;
+    String owner;
     final int wateringInterval; // This is like the threshold we will use.
 
-
-    // This is our plant constructor that will initialize the instance variables.
-    public Plant(int lastWatered, String type, int wateringInterval, String nickname) {
-        this.lastWatered = lastWatered;
-        this.type = type;
-        this.wateringInterval = wateringInterval;
+    public Plant(String nickname, String type) {
         this.nickname = nickname;
+        this.type = type;
+        this.lastWatered = 3;
+        this.wateringInterval = 3;
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        this.owner = currentUser.getString("username");
     }
 
+    public Plant(int wateringInterval, int lastWatered, String type, String nickname, String owner) {
+        this.wateringInterval = wateringInterval;
+        this.lastWatered = lastWatered;
+        this.type = type;
+        this.nickname = nickname;
+
+        //Assign the current user to this plant
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        this.owner = currentUser.getString("username");
+    }
 
     // Setter and Getter Methods
     public void setLastWatered(int lastWatered) {
@@ -31,22 +44,17 @@ public class Plant {
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
+    public void setOwner(String owner){ this.owner = owner; }
     public int getLastWatered() { return lastWatered; }
-    public String getType() {
-        return type;
-    }
+    public String getType() { return type; }
     public int getWateringInterval() {
         return wateringInterval;
     }
     public String getNickname() {
         return nickname;
     }
+    public String getOwner() { return owner;}
 
-
-    /******************************
-     * ******* I THINK THIS VIOLATES SRP BECAUSE A PLANT DOESNT UPLOAD ITSELF, PEOPLE DO?
-     * *******************************
-     */
 
     // Creating a function that allows a plant to be uploaded to Parse.
     public void uploadPlant(){
@@ -61,6 +69,7 @@ public class Plant {
         ParseObject uploadingPlant = new ParseObject("uploadedPlants");
         uploadingPlant.put("Nickname",this.getType());
         uploadingPlant.put("Type",this.getType());
+        uploadingPlant.put("Owner", this.getOwner());
         uploadingPlant.put("WateringInterval",this.getWateringInterval());
         uploadingPlant.put("LastWatered",this.getLastWatered());
         uploadingPlant.saveInBackground(); // Saves this obj to the server in the background thread.

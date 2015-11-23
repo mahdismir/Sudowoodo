@@ -16,6 +16,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name=".authenticator.ParseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -34,7 +35,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        /* MENU SCREEN*/
+        /******************************************************************************************/
+        /******************************** PARSE LOGIN ACTIVITIES **********************************/
+        /******************************************************************************************/
+        <activity
+            android:name=".authenticator.DispatchActivity"
+            android:label="@string/title_activity_dispatch"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".authenticator.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".authenticator.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".authenticator.SignUpOrLoginActivity"
+            android:label="@string/title_activity_sign_up_or_login"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        /******************************************************************************************/
+        /******************************** MAIN MENU SCREEN ****************************************/
+        /******************************************************************************************/
         <activity
             android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
@@ -63,36 +89,40 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.DisplayMessageActivity" />
         </activity>
+        // ADD TEMPERATE
         <activity
             android:name=".AddTemperate"
-            android:label="@string/title_activity_add_moss"
+            android:label="@string/title_activity_add_temperate"
             android:parentActivityName=".AddPlant"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
+        //ADD DESERT
         <activity
             android:name=".AddDesert"
-            android:label="@string/title_activity_add_conifer"
+            android:label="@string/title_activity_add_desert"
             android:parentActivityName=".AddPlant"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
+        //ADD COOL
         <activity
             android:name=".AddCool"
-            android:label="@string/title_activity_add_flowering"
+            android:label="@string/title_activity_add_cool"
             android:parentActivityName=".AddPlant"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
+        //ADD TROPICAL
         <activity
             android:name=".AddTropical"
-            android:label="@string/title_activity_add_fern"
+            android:label="@string/title_activity_add_tropical"
             android:parentActivityName=".AddPlant"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
@@ -101,7 +131,8 @@
         </activity>
         /*((((((((((END ADD PLANT OPTIONS)))))))))))))*/
 
-        /* WATERING SCHEDULE ACTIVITY */
+
+        /* MENU 3:  WATERING SCHEDULE ACTIVITY */
         <activity
             android:name=".WateringScheduleActivity"
             android:label="@string/title_activity_water_schedule"
@@ -111,7 +142,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
-        /* PLANT LIST ACTIVITY */
+        /* MENU 4:  PLANT LIST ACTIVITY */
         <activity
             android:name=".PlantListActivity"
             android:label="@string/title_activity_plant_list"
@@ -121,6 +152,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.AddPlant" />
         </activity>
+        /* TEST PERSON ACTIVITY */
+
+        <activity
+            android:name=".test.PersonTest"
+            android:label="@string/title_activity_person_test"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+
         <activity
             android:name=".CoolPopUp"
             android:label="@string/title_activity_cool_pop_up"
@@ -204,6 +243,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.thinkpad.myfirstapp.WateringScheduleActivity" />
         </activity>
+        <activity
+            android:name=".authenticator.SingleItemView"
+            android:label="@string/title_activity_single_item_view"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+
     </application>
 
 </manifest>

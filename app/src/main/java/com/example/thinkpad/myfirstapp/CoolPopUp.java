@@ -9,6 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import com.example.thinkpad.myfirstapp.test.TestAddAPlant;
 
 public class CoolPopUp extends AppCompatActivity {
 
@@ -23,7 +26,7 @@ public class CoolPopUp extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.6),(int)(height*.4));
+        getWindow().setLayout((int)(width*.8),(int)(height*.6));
 
         Button cancelbutton = (Button) findViewById(R.id.CancelonPopUpCool);
         cancelbutton.setOnClickListener(new View.OnClickListener() {
@@ -40,8 +43,14 @@ public class CoolPopUp extends AppCompatActivity {
         addPlantButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0){
                 // Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), Plant.class);
+                Intent nextScreen = new Intent(getApplicationContext(), TestAddAPlant.class);
+                //get the string from
+                EditText editNickname = (EditText)findViewById(R.id.plant_nickname);
+                String plantNickname = editNickname.getText().toString();
+                nextScreen.putExtra("plantNickname", plantNickname);
+                nextScreen.putExtra("plantType", "Cool");
                 startActivity(nextScreen);
+                finish();
             }
         });
 

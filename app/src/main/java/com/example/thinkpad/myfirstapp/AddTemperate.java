@@ -17,10 +17,6 @@ public class AddTemperate extends AppCompatActivity {
         setContentView(R.layout.activity_add_temperate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
-
         Button popup = (Button) findViewById(R.id.addTemperatePopUp);
         popup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {

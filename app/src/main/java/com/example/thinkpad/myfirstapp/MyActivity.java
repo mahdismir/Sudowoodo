@@ -15,8 +15,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.example.thinkpad.myfirstapp.authenticator.DispatchActivity;
 import com.parse.Parse;
 import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 public class MyActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
@@ -34,14 +36,14 @@ public class MyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        ParseUser.getCurrentUser().logOut();
 
         /******************************************************/
         /**************parse database stuff WIP****************/
         /******************************************************/
         // Enable Local Datastore for user/plant management
-        Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "QR0kncaDZr4y8jxbOwqBOiPGghhRm1UKPiXA4Jl3", "EHuNBEuSo3qkBaxMgPdp5NxqH9bwJztDNyglmIk6");
+        //Parse.enableLocalDatastore(this);
+        //Parse.initialize(this, getString(R.string.parse_app_id), getString(R.string.parse_client_id));
 
 
 
@@ -71,6 +73,8 @@ public class MyActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            ParseUser.getCurrentUser().logOut();
+            startActivity(new Intent(MyActivity.this, DispatchActivity.class));
             return true;
         }
 
@@ -80,6 +84,9 @@ public class MyActivity extends AppCompatActivity {
     /******************************************************/
     /***********DISPLAY MAIN MENU ACTIVITY*****************/
     /******************************************************/
+    /*
+
+
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -87,6 +94,20 @@ public class MyActivity extends AppCompatActivity {
         //intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+    */
+    /**************************************************/
+    /***********DISPLAY LOGIN ACTIVITY*****************/
+    /**************************************************/
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, DispatchActivity.class);
+        //EditText editText = (EditText) findViewById(R.id.edit_message);
+        //String message = editText.getText().toString();
+        //intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+        finish();
+    }
+
+
 
     /************************************************/
     /***************SAVED STATE CODE*****************/

@@ -15,8 +15,8 @@ public class AddDesert extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_desert);
-
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Button popup = (Button) findViewById(R.id.addDesertPopUp);
         popup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {

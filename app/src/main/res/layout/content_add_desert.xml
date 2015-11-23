@@ -19,7 +19,7 @@
 
     <TextView
         android:text="@string/DesertInfo"
-        android:textSize="30dp"
+        android:textSize="16dp"
         android:textColor="#FFFFFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,9 +33,9 @@
         android:layout_height="wrap_content"
         android:text="Add"
         android:id="@+id/addDesertPopUp"
+        android:layout_marginTop="45dp"
         android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="183dp" />
+        android:layout_centerHorizontal="true" />
             </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

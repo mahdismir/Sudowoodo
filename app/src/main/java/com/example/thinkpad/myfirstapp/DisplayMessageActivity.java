@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.thinkpad.myfirstapp.test.TestAddAPlant;
+import com.example.thinkpad.myfirstapp.test.PersonTest;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -29,10 +29,10 @@ public class DisplayMessageActivity extends AppCompatActivity {
                 /****************************/
 
                 // This is what is used to do
-                //Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
+                Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
 
                 //changed to this for parse testing stuff
-                Intent nextScreen = new Intent(getApplicationContext(), Plant.class);
+                //Intent nextScreen = new Intent(getApplicationContext(), Plant.class);
 
 
                 //Sending data to another Activity
@@ -92,8 +92,9 @@ public class DisplayMessageActivity extends AppCompatActivity {
         btnPlantListActivity.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), PlantListActivity.class);
 
+                //Intent nextScreen = new Intent(getApplicationContext(), PlantListActivity.class);
+                Intent nextScreen = new Intent(getApplicationContext(), PlantListActivity.class);
                 //Sending data to another Activity
                 //nextScreen.putExtra("name", inputName.getText().toString());
                 //nextScreen.putExtra("email", inputEmail.getText().toString());

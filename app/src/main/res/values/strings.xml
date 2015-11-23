@@ -14,16 +14,16 @@
     <string name="location">Location</string>
     <string name="condition">Condition</string>
     <string name="temperature">Temperature</string>
-    <string name="title_activity_button_add_a_new_plant">button_add_a_new_plant</string>
+    <string name="title_activity_button_add_a_new_plant">Add A Plant</string>
     <string name="fern">Ferns</string>
     <string name="flowering">Flowering</string>
     <string name="conifer">conifer</string>
     <string name="moss">Moss</string>
     <string name="displaycategories">Choose you plant from the categories:</string>
-    <string name="title_activity_add_moss">AddMoss</string>
-    <string name="title_activity_add_conifer">AddConifer</string>
-    <string name="title_activity_add_flowering">AddFlowering</string>
-    <string name="title_activity_add_fern">AddFern</string>
+    <string name="title_activity_add_temperate">Add Temperate</string>
+    <string name="title_activity_add_desert">Add Desert</string>
+    <string name="title_activity_add_cool">Add Cool</string>
+    <string name="title_activity_add_tropical">Add Tropical</string>
 
     <string name="title_activity_cool_pop_up">CoolPopUp</string>
     <string name="title_activity_desert_pop_up">DesertPopUp</string>
@@ -42,10 +42,15 @@
                           when plant is dormant, water once a month.</string>
     <string name="title_activity_add_plant_test">Sign in</string>
 
+    
+    <!-- Parse Keys -->
+    <string name="parse_app_id">QR0kncaDZr4y8jxbOwqBOiPGghhRm1UKPiXA4Jl3</string>
+    <string name="parse_client_id">EHuNBEuSo3qkBaxMgPdp5NxqH9bwJztDNyglmIk6</string>
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="prompt_username">User Name</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_again">Enter Same Password Again</string>
+    <string name="prompt_sign_up">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
@@ -59,6 +64,27 @@
     <string name="title_activity_water_temperate">WaterTemperate</string>
     <string name="title_activity_water_tropical">WaterTropical</string>
     <string name="title_activity_water_desert">WaterDesert</string>
+    <string name="title_activity_sign_up_or_login">SignUpOrLoginActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_dispatch">DispatchActivity</string>
+    <string name="error_intro">Please</string>
+    <string name="error_blank_username">enter a username</string>
+    <string name="error_join">, and</string>
+    <string name="error_blank_password">enter a password</string>
+    <string name="error_mismatched_passwords">enter the same password twice</string>
+    <string name="error_end">.</string>
+    <string name="title_activity_list_view_adapter">ListViewAdapter</string>
+
+    <!-- Plant List Strings -->
+    <string name="nicknameLabel">"Nickname : "</string>
+    <string name="typeLabel">"Type : "</string>
+    <string name="lastWateredLabel">"Last Watered : "</string>
+
+
+    <string name="title_activity_single_item_view">SingleItemView</string>
+    <string name="title_activity_listview_main">ListviewMain</string>
+    <string name="title_activity_person_test">PersonTest</string>
 
 </resources>
 

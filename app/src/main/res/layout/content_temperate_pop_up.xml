@@ -13,30 +13,38 @@
 
 
     <EditText
+        android:id="@+id/plant_nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/TextonPopUp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"/>
+        android:hint="Nickname"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginTop="78dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
         android:id="@+id/AddonPopUpTemperate"
-        android:layout_below="@+id/TextonPopUp"
-        android:layout_toLeftOf="@+id/TextonPopUp"
-        android:layout_toStartOf="@+id/TextonPopUp" />
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp"
+        android:layout_alignTop="@+id/CancelOnPopUpTemperate"
+        android:layout_alignRight="@+id/plant_nickname"
+        android:layout_alignEnd="@+id/plant_nickname" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"
-        android:id="@+id/CancelonPopUpTemperate"
-        android:layout_below="@+id/TextonPopUp"
-        android:layout_toRightOf="@+id/TextonPopUp"
-        android:layout_toEndOf="@+id/TextonPopUp"
-        android:layout_alignBottom="@+id/AddonPopUp"
-        android:layout_alignTop="@+id/AddonPopUp" />
+        android:id="@+id/CancelOnPopUpTemperate"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_below="@+id/plant_nickname"
+        android:layout_alignLeft="@+id/plant_nickname"
+        android:layout_alignStart="@+id/plant_nickname" />
 
 </RelativeLayout>
