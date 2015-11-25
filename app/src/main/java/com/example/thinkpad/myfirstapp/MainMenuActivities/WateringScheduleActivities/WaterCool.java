@@ -1,4 +1,4 @@
-package com.example.thinkpad.myfirstapp;
+package com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.thinkpad.myfirstapp.R;
 
 public class WaterCool extends AppCompatActivity {
 

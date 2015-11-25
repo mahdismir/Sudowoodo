@@ -1,4 +1,4 @@
-package com.example.thinkpad.myfirstapp;
+package com.example.thinkpad.myfirstapp.MainMenuActivities;
 
 import android.app.ListActivity;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+
+import com.example.thinkpad.myfirstapp.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -57,7 +59,6 @@ public class PlantListActivity extends ListActivity {
                 getListView().setAdapter(adapter);
             }
         });
-
     }
 
     @Override

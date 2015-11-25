@@ -6,9 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.thinkpad.myfirstapp.test.PersonTest;
+import com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.AddPlantMenu;
+import com.example.thinkpad.myfirstapp.MainMenuActivities.PlantListActivity;
+import com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity;
+import com.example.thinkpad.myfirstapp.MainMenuActivities.WeatherActivity;
 
-public class DisplayMessageActivity extends AppCompatActivity {
+public class MainMenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +57,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         btnAddPlant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), AddPlant.class);
+                Intent nextScreen = new Intent(getApplicationContext(), AddPlantMenu.class);
 
                 //Sending data to another Activity
                 //nextScreen.putExtra("name", inputName.getText().toString());

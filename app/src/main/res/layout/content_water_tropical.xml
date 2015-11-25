@@ -9,7 +9,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_water_tropical"
     android:background="#d79393"
-    tools:context="com.example.thinkpad.myfirstapp.WaterTropical">
+    tools:context="com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities.WaterTropical">
 
 
 

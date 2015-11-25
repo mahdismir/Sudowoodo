@@ -1,26 +1,17 @@
 package com.example.thinkpad.myfirstapp;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 
 import com.example.thinkpad.myfirstapp.authenticator.DispatchActivity;
-import com.parse.Parse;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 
-public class MyActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
 
 
@@ -74,7 +65,7 @@ public class MyActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             ParseUser.getCurrentUser().logOut();
-            startActivity(new Intent(MyActivity.this, DispatchActivity.class));
+            startActivity(new Intent(MainActivity.this, DispatchActivity.class));
             return true;
         }
 
@@ -88,7 +79,7 @@ public class MyActivity extends AppCompatActivity {
 
 
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(this, MainMenuActivity.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
         //String message = editText.getText().toString();
         //intent.putExtra(EXTRA_MESSAGE, message);

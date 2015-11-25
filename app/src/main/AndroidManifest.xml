@@ -25,7 +25,7 @@
         android:theme="@style/AppTheme" >
         /* TITLE SCREEN */
         <activity
-            android:name=".MyActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -62,95 +62,95 @@
         /******************************** MAIN MENU SCREEN ****************************************/
         /******************************************************************************************/
         <activity
-            android:name=".DisplayMessageActivity"
+            android:name=".MainMenuActivity"
             android:label="@string/title_activity_display_message"
-            android:parentActivityName=".MyActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.MyActivity" />
+                android:value=".MainActivity" />
         </activity>
         /* MENU 1: WEATHER ACTIVITY */
         <activity
-            android:name=".WeatherActivity"
+            android:name=".MainMenuActivities.WeatherActivity"
             android:label="@string/title_activity_weather"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         /* MENU 2:  ADD A PLANT ACTIVITY */
         <activity
-            android:name=".AddPlant"
+            android:name=".MainMenuActivities.AddPlantActivities.AddPlantMenu"
             android:label="@string/title_activity_button_add_a_new_plant"
-            android:parentActivityName=".DisplayMessageActivity"
+            android:parentActivityName=".MainMenuActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.DisplayMessageActivity" />
+                android:value=".MainMenuActivity" />
         </activity>
         // ADD TEMPERATE
         <activity
-            android:name=".AddTemperate"
+            android:name=".MainMenuActivities.AddPlantActivities.PlantCategories.AddTemperate"
             android:label="@string/title_activity_add_temperate"
-            android:parentActivityName=".AddPlant"
+            android:parentActivityName=".MainMenuActivities.AddPlantActivities.AddPlantMenu"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+                android:value=".MainMenuActivities.AddPlantActivities.AddPlantMenu" />
         </activity>
         //ADD DESERT
         <activity
-            android:name=".AddDesert"
+            android:name=".MainMenuActivities.AddPlantActivities.PlantCategories.AddDesert"
             android:label="@string/title_activity_add_desert"
-            android:parentActivityName=".AddPlant"
+            android:parentActivityName=".MainMenuActivities.AddPlantActivities.AddPlantMenu"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+                android:value=".MainMenuActivities.AddPlantActivities.AddPlantMenu" />
         </activity>
         //ADD COOL
         <activity
-            android:name=".AddCool"
+            android:name=".MainMenuActivities.AddPlantActivities.PlantCategories.AddCool"
             android:label="@string/title_activity_add_cool"
-            android:parentActivityName=".AddPlant"
+            android:parentActivityName=".MainMenuActivities.AddPlantActivities.AddPlantMenu"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+                android:value=".MainMenuActivities.AddPlantActivities.AddPlantMenu" />
         </activity>
         //ADD TROPICAL
         <activity
-            android:name=".AddTropical"
+            android:name=".MainMenuActivities.AddPlantActivities.PlantCategories.AddTropical"
             android:label="@string/title_activity_add_tropical"
-            android:parentActivityName=".AddPlant"
+            android:parentActivityName=".MainMenuActivities.AddPlantActivities.AddPlantMenu"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+                android:value=".MainMenuActivities.AddPlantActivities.AddPlantMenu" />
         </activity>
         /*((((((((((END ADD PLANT OPTIONS)))))))))))))*/
 
 
         /* MENU 3:  WATERING SCHEDULE ACTIVITY */
         <activity
-            android:name=".WateringScheduleActivity"
+            android:name=".MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity"
             android:label="@string/title_activity_water_schedule"
-            android:parentActivityName=".DisplayMessageActivity"
+            android:parentActivityName=".MainMenuActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+                android:value=".MainMenuActivities.AddPlantActivities.AddPlantMenu" />
         </activity>
         /* MENU 4:  PLANT LIST ACTIVITY */
         <activity
-            android:name=".PlantListActivity"
+            android:name=".MainMenuActivities.PlantListActivity"
             android:label="@string/title_activity_plant_list"
-            android:parentActivityName=".DisplayMessageActivity"
+            android:parentActivityName=".MainMenuActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddPlant" />
+                android:value=".MainMenuActivities.AddPlantActivities.AddPlantMenu" />
         </activity>
         /* TEST PERSON ACTIVITY */
 
@@ -161,90 +161,90 @@
         </activity>
 
         <activity
-            android:name=".CoolPopUp"
+            android:name=".MainMenuActivities.AddPlantActivities.AddPlantPopUps.CoolPopUp"
             android:label="@string/title_activity_cool_pop_up"
-            android:parentActivityName=".AddCool"
+            android:parentActivityName=".MainMenuActivities.AddPlantActivities.PlantCategories.AddCool"
             android:theme="@style/AppTheme.CustomeTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddCool" />
+                android:value=".MainMenuActivities.AddPlantActivities.PlantCategories.AddCool" />
         </activity>
         <activity
-            android:name=".DesertPopUp"
+            android:name=".MainMenuActivities.AddPlantActivities.AddPlantPopUps.DesertPopUp"
             android:label="@string/title_activity_desert_pop_up"
-            android:parentActivityName=".AddDesert"
+            android:parentActivityName=".MainMenuActivities.AddPlantActivities.PlantCategories.AddDesert"
             android:theme="@style/AppTheme.CustomeTheme" >
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddDesert" />
+                android:value=".MainMenuActivities.AddPlantActivities.PlantCategories.AddDesert" />
         </activity>
         <activity
-            android:name=".TemperatePopUp"
+            android:name=".MainMenuActivities.AddPlantActivities.AddPlantPopUps.TemperatePopUp"
             android:label="@string/title_activity_temperate_pop_up"
-            android:parentActivityName=".AddTemperate"
+            android:parentActivityName=".MainMenuActivities.AddPlantActivities.PlantCategories.AddTemperate"
             android:theme="@style/AppTheme.CustomeTheme" >
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddTemperate" />
+                android:value=".MainMenuActivities.AddPlantActivities.PlantCategories.AddTemperate" />
         </activity>
         <activity
-            android:name=".TropicalPopUp"
+            android:name=".MainMenuActivities.AddPlantActivities.AddPlantPopUps.TropicalPopUp"
             android:label="@string/title_activity_tropical_pop_up"
-            android:parentActivityName=".AddTropical"
+            android:parentActivityName=".MainMenuActivities.AddPlantActivities.PlantCategories.AddTropical"
             android:theme="@style/AppTheme.CustomeTheme" >
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.AddTropical" />
+                android:value=".MainMenuActivities.AddPlantActivities.PlantCategories.AddTropical" />
         </activity>
         /**************************************************************/
         /*******TESTING STUFF******************************************/
         /**************************************************************/
         <activity
-            android:name=".test.TestAddAPlant"
+            android:name=".MainMenuActivities.AddPlantActivities.ParseAddPlant"
             android:label="@string/title_activity_test_add_aplant"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".WaterCool"
+            android:name=".MainMenuActivities.WateringScheduleActivities.WaterCool"
             android:label="@string/title_activity_water_cool"
-            android:parentActivityName=".WateringScheduleActivity"
+            android:parentActivityName=".MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity"
             android:theme="@style/AppTheme.CustomeTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.WateringScheduleActivity" />
+                android:value=".MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity" />
         </activity>
         <activity
-            android:name=".WaterTemperate"
+            android:name=".MainMenuActivities.WateringScheduleActivities.WaterTemperate"
             android:label="@string/title_activity_water_temperate"
-            android:parentActivityName=".WateringScheduleActivity"
+            android:parentActivityName=".MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity"
             android:theme="@style/AppTheme.CustomeTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.WateringScheduleActivity" />
+                android:value=".MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity" />
         </activity>
         <activity
-            android:name=".WaterTropical"
+            android:name=".MainMenuActivities.WateringScheduleActivities.WaterTropical"
             android:label="@string/title_activity_water_tropical"
-            android:parentActivityName=".WateringScheduleActivity"
+            android:parentActivityName=".MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity"
             android:theme="@style/AppTheme.CustomeTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.WateringScheduleActivity" />
+                android:value=".MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity" />
         </activity>
         <activity
-            android:name=".WaterDesert"
+            android:name=".MainMenuActivities.WateringScheduleActivities.WaterDesert"
             android:label="@string/title_activity_water_desert"
-            android:parentActivityName=".WateringScheduleActivity"
+            android:parentActivityName=".MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity"
             android:theme="@style/AppTheme.CustomeTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.thinkpad.myfirstapp.WateringScheduleActivity" />
+                android:value=".MainMenuActivities.WateringScheduleActivities.WateringScheduleActivity" />
         </activity>
         <activity
-            android:name=".authenticator.SingleItemView"
+            android:name=".MainMenuActivities.ListOfPlantsActivities.DisplayUserPlants"
             android:label="@string/title_activity_single_item_view"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>

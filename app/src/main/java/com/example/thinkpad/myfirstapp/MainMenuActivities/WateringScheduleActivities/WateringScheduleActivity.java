@@ -1,14 +1,16 @@
-package com.example.thinkpad.myfirstapp;
+package com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities.WaterCool;
+import com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities.WaterDesert;
+import com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities.WaterTemperate;
+import com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities.WaterTropical;
 import com.example.thinkpad.myfirstapp.R;
 
 public class WateringScheduleActivity extends AppCompatActivity {

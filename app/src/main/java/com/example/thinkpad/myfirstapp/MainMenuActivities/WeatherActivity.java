@@ -1,31 +1,23 @@
-package com.example.thinkpad.myfirstapp;
+package com.example.thinkpad.myfirstapp.MainMenuActivities;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
-import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.thinkpad.myfirstapp.R;
 import com.example.thinkpad.myfirstapp.data.Channel;
 import com.example.thinkpad.myfirstapp.data.Item;
-import com.example.thinkpad.myfirstapp.service.WeatherServiceCallback;
-import com.example.thinkpad.myfirstapp.service.YahooWeatherService;
-
-import org.w3c.dom.Text;
+import com.example.thinkpad.myfirstapp.WeatherService.WeatherServiceCallback;
+import com.example.thinkpad.myfirstapp.WeatherService.YahooWeatherService;
 
 public class WeatherActivity extends AppCompatActivity implements WeatherServiceCallback {
 

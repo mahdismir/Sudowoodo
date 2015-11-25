@@ -1,4 +1,4 @@
-package com.example.thinkpad.myfirstapp.service;
+package com.example.thinkpad.myfirstapp.WeatherService;
 
 import com.example.thinkpad.myfirstapp.data.Channel;
 

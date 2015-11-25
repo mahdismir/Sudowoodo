@@ -1,27 +1,28 @@
-package com.example.thinkpad.myfirstapp;
+package com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.PlantCategories;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class AddDesert extends AppCompatActivity {
+import com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.AddPlantPopUps.TemperatePopUp;
+import com.example.thinkpad.myfirstapp.R;
+
+public class AddTemperate extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_desert);
+        setContentView(R.layout.activity_add_temperate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Button popup = (Button) findViewById(R.id.addDesertPopUp);
+        Button popup = (Button) findViewById(R.id.addTemperatePopUp);
         popup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), DesertPopUp.class);
+                Intent nextScreen = new Intent(getApplicationContext(), TemperatePopUp.class);
 
                 //Sending data to another Activity
                 //nextScreen.putExtra("name", inputName.getText().toString());
@@ -33,10 +34,10 @@ public class AddDesert extends AppCompatActivity {
 
             }
         });
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+
+      /*  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,4 +1,4 @@
-package com.example.thinkpad.myfirstapp.service;
+package com.example.thinkpad.myfirstapp.WeatherService;
 
 import android.net.Uri;
 import android.os.AsyncTask;

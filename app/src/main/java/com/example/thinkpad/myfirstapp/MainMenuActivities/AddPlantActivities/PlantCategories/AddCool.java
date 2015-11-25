@@ -1,27 +1,28 @@
-package com.example.thinkpad.myfirstapp;
+package com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.PlantCategories;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class AddTemperate extends AppCompatActivity {
+import com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.AddPlantPopUps.CoolPopUp;
+import com.example.thinkpad.myfirstapp.R;
+
+public class AddCool extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_temperate);
+        setContentView(R.layout.activity_add_cool);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Button popup = (Button) findViewById(R.id.addTemperatePopUp);
+        Button popup = (Button) findViewById(R.id.addCoolPopUp);
         popup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), TemperatePopUp.class);
+                Intent nextScreen = new Intent(getApplicationContext(), CoolPopUp.class);
 
                 //Sending data to another Activity
                 //nextScreen.putExtra("name", inputName.getText().toString());
@@ -31,12 +32,17 @@ public class AddTemperate extends AppCompatActivity {
 
                 startActivity(nextScreen);
 
+
+                finish();
+
             }
         });
 
 
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
-      /*  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +50,7 @@ public class AddTemperate extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
-    }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+*/    }
 
 }

@@ -1,13 +1,10 @@
 package com.example.thinkpad.myfirstapp.test;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
-import com.example.thinkpad.myfirstapp.Person;
+import com.example.thinkpad.myfirstapp.data.Person;
 import com.example.thinkpad.myfirstapp.R;
 
 public class PersonTest extends AppCompatActivity {

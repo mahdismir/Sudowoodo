@@ -1,4 +1,4 @@
-package com.example.thinkpad.myfirstapp.authenticator;
+package com.example.thinkpad.myfirstapp.MainMenuActivities.ListOfPlantsActivities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.example.thinkpad.myfirstapp.R;
 
-public class SingleItemView extends Activity {
+public class DisplayUserPlants extends Activity {
     // Declare Variables
     String nickname;
     String type;

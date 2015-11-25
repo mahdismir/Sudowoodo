@@ -1,15 +1,12 @@
-package com.example.thinkpad.myfirstapp;
+package com.example.thinkpad.myfirstapp.data;
 
 
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import com.parse.FindCallback;
-import com.parse.GetCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;

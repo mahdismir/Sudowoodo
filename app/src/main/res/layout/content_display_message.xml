@@ -8,6 +8,6 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_display_message"
-    tools:context="com.example.thinkpad.myfirstapp.DisplayMessageActivity">
+    tools:context="com.example.thinkpad.myfirstapp.MainMenuActivity">
 
 </LinearLayout>

@@ -2,16 +2,9 @@ package com.example.thinkpad.myfirstapp.authenticator;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 
-import com.example.thinkpad.myfirstapp.DisplayMessageActivity;
-import com.example.thinkpad.myfirstapp.MyActivity;
-import com.example.thinkpad.myfirstapp.R;
-import com.parse.Parse;
+import com.example.thinkpad.myfirstapp.MainMenuActivity;
 import com.parse.ParseUser;
 
 
@@ -31,7 +24,7 @@ public class DispatchActivity extends AppCompatActivity {
         //Parse.initialize(this, getString(R.string.parse_app_id), getString(R.string.parse_client_id));
         if(ParseUser.getCurrentUser() != null){
             // Start an intent for the logged in activity
-            startActivity(new Intent(this, DisplayMessageActivity.class));
+            startActivity(new Intent(this, MainMenuActivity.class));
             finish();
         } else {
             // Start an intent for the logged out activity

@@ -1,4 +1,4 @@
-package com.example.thinkpad.myfirstapp;
+package com.example.thinkpad.myfirstapp.data;
 
 import com.parse.ParseObject;
 import com.parse.ParseUser;

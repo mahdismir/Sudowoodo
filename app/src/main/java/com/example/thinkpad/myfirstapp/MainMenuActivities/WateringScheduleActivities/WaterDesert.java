@@ -1,4 +1,4 @@
-package com.example.thinkpad.myfirstapp;
+package com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,12 +9,14 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 
-public class WaterTemperate extends AppCompatActivity {
+import com.example.thinkpad.myfirstapp.R;
+
+public class WaterDesert extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_water_temperate);
+        setContentView(R.layout.activity_water_desert);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -23,9 +25,7 @@ public class WaterTemperate extends AppCompatActivity {
 
         int width = dm.widthPixels;
         int height = dm.heightPixels;
-
         getWindow().setLayout((int) (width * .6), (int) (height * .4));
-
 
         Button Closebtn = (Button) findViewById(R.id.close);
         Closebtn.setOnClickListener(new View.OnClickListener() {
@@ -33,8 +33,6 @@ public class WaterTemperate extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 
 }
