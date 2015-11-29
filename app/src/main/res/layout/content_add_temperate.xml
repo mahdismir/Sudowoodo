@@ -9,7 +9,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_add_temperate"
     tools:context="com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.PlantCategories.AddTemperate"
-    android:background="#58ce6f">
+    android:background="#196600">
 
 
     <ScrollView

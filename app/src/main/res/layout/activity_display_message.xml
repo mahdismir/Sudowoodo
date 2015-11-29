@@ -30,7 +30,7 @@
             android:text="Today&apos;s Weather"
             android:id="@+id/btnWeatherScreen"
             android:layout_gravity="center_horizontal"
-            android:background="#58cace"
+            android:background="#134d00"
             android:textStyle="bold|italic"
             android:onClick="sendMessage1"
             android:layout_weight=".25" />
@@ -41,7 +41,7 @@
             android:text="Add A New Plant"
             android:id="@+id/btnAddPlant"
             android:layout_gravity="center_horizontal"
-            android:background="#58ce6f"
+            android:background="#196600"
             android:textStyle="bold|italic"
             android:onClick="sendMessage2"
             android:layout_weight=".25" />
@@ -51,7 +51,7 @@
             android:layout_height="0dp"
             android:text="Watering Schedule"
             android:id="@+id/wateringSchedule"
-            android:background="#d79393"
+            android:background="#269900"
             android:textStyle="bold|italic"
             android:onClick="sendMessage3"
             android:layout_weight=".25" />
@@ -61,7 +61,7 @@
             android:layout_height="0dp"
             android:text="List of your Plants"
             android:id="@+id/plantList"
-            android:background="#8f7f82"
+            android:background="#33cc00"
             android:textStyle="bold|italic"
             android:onClick="sendMessage4"
             android:layout_weight=".25" />

@@ -23,29 +23,11 @@ public class AddDesert extends AppCompatActivity {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), DesertPopUp.class);
-
-                //Sending data to another Activity
-                //nextScreen.putExtra("name", inputName.getText().toString());
-                //nextScreen.putExtra("email", inputEmail.getText().toString());
-
-                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
-
                 startActivity(nextScreen);
 
             }
         });
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
     }
 
 }

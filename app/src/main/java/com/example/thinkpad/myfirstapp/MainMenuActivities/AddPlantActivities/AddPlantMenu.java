@@ -26,13 +26,6 @@ public class AddPlantMenu extends AppCompatActivity {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), AddTemperate.class);
-
-                //Sending data to another Activity
-                //nextScreen.putExtra("name", inputName.getText().toString());
-                //nextScreen.putExtra("email", inputEmail.getText().toString());
-
-                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
-
                 startActivity(nextScreen);
 
             }
@@ -44,13 +37,6 @@ public class AddPlantMenu extends AppCompatActivity {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), AddDesert.class);
-
-                //Sending data to another Activity
-                //nextScreen.putExtra("name", inputName.getText().toString());
-                //nextScreen.putExtra("email", inputEmail.getText().toString());
-
-                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
-
                 startActivity(nextScreen);
 
             }
@@ -63,13 +49,6 @@ public class AddPlantMenu extends AppCompatActivity {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), AddCool.class);
-
-                //Sending data to another Activity
-                //nextScreen.putExtra("name", inputName.getText().toString());
-                //nextScreen.putExtra("email", inputEmail.getText().toString());
-
-                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
-
                 startActivity(nextScreen);
 
             }
@@ -82,13 +61,6 @@ public class AddPlantMenu extends AppCompatActivity {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), AddTropical.class);
-
-                //Sending data to another Activity
-                //nextScreen.putExtra("name", inputName.getText().toString());
-                //nextScreen.putExtra("email", inputEmail.getText().toString());
-
-                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
-
                 startActivity(nextScreen);
 
             }

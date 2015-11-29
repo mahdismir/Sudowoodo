@@ -9,7 +9,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_tropical_pop_up"
     tools:context="com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.AddPlantPopUps.TropicalPopUp"
-    android:background="#2c6737">
+    android:background="#269900">
 
 
 

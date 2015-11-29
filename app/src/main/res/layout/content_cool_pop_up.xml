@@ -9,7 +9,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:showIn="@layout/activity_cool_pop_up"
     tools:context="com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.AddPlantPopUps.CoolPopUp"
-    android:background="#2c6737">
+    android:background="#269900">
 
     <!--
     <EditText
