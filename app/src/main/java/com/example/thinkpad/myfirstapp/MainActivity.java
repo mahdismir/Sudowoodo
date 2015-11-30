@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 
+import com.example.thinkpad.myfirstapp.MainMenuActivities.WeatherActivity;
 import com.example.thinkpad.myfirstapp.authenticator.DispatchActivity;
 import com.parse.ParseUser;
 
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             editor.commit();
             alarmMethod();
         }
+
 
 
     }
@@ -127,14 +129,12 @@ public class MainActivity extends AppCompatActivity {
         Calendar alarmCalendar = Calendar.getInstance();
         alarmCalendar.set(Calendar.SECOND,0);
         alarmCalendar.set(Calendar.MINUTE, 0);
-        alarmCalendar.set(Calendar.HOUR, 0);
-        alarmCalendar.set(Calendar.AM_PM, Calendar.AM);
+        alarmCalendar.set(Calendar.HOUR, 12);
+        alarmCalendar.set(Calendar.AM_PM, Calendar.PM);
         alarmCalendar.add(Calendar.DAY_OF_MONTH, 1);
 
 
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, alarmCalendar.getTimeInMillis(), 1000*60*60*24, PendingIntent.getBroadcast(this, 1, alertIntent, PendingIntent.FLAG_UPDATE_CURRENT));
-
-
 
 
     }

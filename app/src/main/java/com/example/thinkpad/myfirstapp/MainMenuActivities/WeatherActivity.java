@@ -21,6 +21,8 @@ import com.example.thinkpad.myfirstapp.WeatherService.YahooWeatherService;
 
 public class WeatherActivity extends AppCompatActivity implements WeatherServiceCallback {
 
+    public static int temperature;
+
     //Changed default city to Austin Tx
     private String USER_CITY;
     private String DEFAULT_CITY = "Austin, TX";
@@ -156,6 +158,8 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
         temperatureTextView.setText(item.getCondition().getTemperature() + "\u00B0 " + channel.getUnits().getTemperature());
         conditionTextView.setText(item.getCondition().getDescription());
         locationTextView.setText(service.getLocation());
+
+        temperature = item.getCondition().getTemperature();
     }
     /* This function runs when we fail to query yahoo */
     @Override
