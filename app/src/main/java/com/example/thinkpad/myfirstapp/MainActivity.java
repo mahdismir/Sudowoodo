@@ -1,6 +1,11 @@
 package com.example.thinkpad.myfirstapp;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -10,6 +15,9 @@ import android.content.Intent;
 
 import com.example.thinkpad.myfirstapp.authenticator.DispatchActivity;
 import com.parse.ParseUser;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
@@ -47,6 +55,21 @@ public class MainActivity extends AppCompatActivity {
         //                .setAction("Action", null).show();
         //    }
         // });
+
+
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        int i = preferences.getInt("numberOfLaunches", 1);
+
+        if(i < 2){
+            i++;
+            editor.putInt("numberOfLaunches", i);
+            editor.commit();
+            alarmMethod();
+        }
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -89,6 +112,35 @@ public class MainActivity extends AppCompatActivity {
     /**************************************************/
     /***********DISPLAY LOGIN ACTIVITY*****************/
     /**************************************************/
+
+    private void alarmMethod(){
+
+        Long alertTime = new GregorianCalendar().getTimeInMillis()+5*1000;
+
+        Intent alertIntent = new Intent(this, AlertReceiver.class);
+
+        AlarmManager alarmManager = (AlarmManager)
+                getSystemService(Context.ALARM_SERVICE);
+
+        alertIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        Calendar alarmCalendar = Calendar.getInstance();
+        alarmCalendar.set(Calendar.SECOND,0);
+        alarmCalendar.set(Calendar.MINUTE, 0);
+        alarmCalendar.set(Calendar.HOUR, 0);
+        alarmCalendar.set(Calendar.AM_PM, Calendar.AM);
+        alarmCalendar.add(Calendar.DAY_OF_MONTH, 1);
+
+
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, alarmCalendar.getTimeInMillis(), 1000*60*60*24, PendingIntent.getBroadcast(this, 1, alertIntent, PendingIntent.FLAG_UPDATE_CURRENT));
+
+
+
+
+    }
+
+
+
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DispatchActivity.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
