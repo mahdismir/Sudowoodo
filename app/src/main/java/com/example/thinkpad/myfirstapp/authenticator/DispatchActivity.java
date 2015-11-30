@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.thinkpad.myfirstapp.MainMenuActivity;
+import com.example.thinkpad.myfirstapp.R;
 import com.parse.ParseUser;
 
 
@@ -18,7 +19,7 @@ public class DispatchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_dispatch);
+        setContentView(R.layout.activity_dispatch);
         //check if there is current user info
         //Parse.enableLocalDatastore(this);
         //Parse.initialize(this, getString(R.string.parse_app_id), getString(R.string.parse_client_id));
