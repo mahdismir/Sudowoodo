@@ -9,7 +9,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_display_categories"
     tools:context="com.example.thinkpad.myfirstapp.DisplayCategories"
-    android:background="#196600">
+    android:background="#f06007">
 
 <ScrollView
     android:layout_width="wrap_content"

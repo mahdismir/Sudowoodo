@@ -8,7 +8,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_water_temperate"
-    android:background="#269900"
+    android:background="#c6c606"
     tools:context="com.example.thinkpad.myfirstapp.MainMenuActivities.WateringScheduleActivities.WaterTemperate">
 
     <ScrollView

@@ -8,7 +8,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_watering_schedule"
-    android:background="#269900"
+    android:background="#f6f608"
     tools:context="com.example.saif.myapplication.WateringScheduleActivity">
 
 

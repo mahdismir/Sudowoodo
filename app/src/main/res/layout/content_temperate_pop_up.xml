@@ -9,7 +9,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_temperate_pop_up"
     tools:context="com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.AddPlantPopUps.TemperatePopUp"
-    android:background="#269900">
+    android:background="#f86307">
 
 
     <EditText
