@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 import com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.ParseAddPlant;
 import com.example.thinkpad.myfirstapp.MainMenuActivities.AddPlantActivities.PlantCategories.AddTemperate;
+import com.example.thinkpad.myfirstapp.MainMenuActivity;
 import com.example.thinkpad.myfirstapp.R;
 
 public class TemperatePopUp extends AppCompatActivity {

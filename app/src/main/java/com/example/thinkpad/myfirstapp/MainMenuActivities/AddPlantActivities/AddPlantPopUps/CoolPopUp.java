@@ -51,9 +51,7 @@ public class CoolPopUp extends AppCompatActivity {
                 nextScreen.putExtra("plantType", "Cool");
                 startActivity(nextScreen);
                 finish();
-                Intent previousScreen = new Intent(getApplicationContext(),
-                        MainMenuActivity.class);
-                startActivity(previousScreen);
+
             }
         });
 
