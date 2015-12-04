@@ -18,19 +18,13 @@ public class AddTropical extends AppCompatActivity {
         setContentView(R.layout.activity_add_tropical);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
         Button popup = (Button) findViewById(R.id.addTropicalPopUp);
         popup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), TropicalPopUp.class);
-                startActivity(nextScreen);
-
+            // Starting a new Intent.
+            Intent nextScreen = new Intent(getApplicationContext(), TropicalPopUp.class);
+            startActivity(nextScreen);
             }
         });
-
     }
-
 }

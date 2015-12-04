@@ -14,8 +14,7 @@ public class AddCool extends AppCompatActivity {
 
     boolean addButtonPressedFlag;
 
-
-    // Accessor Method
+    // Accessor Method for testing.
     public boolean getAddButtonPressedFlag(){
         return addButtonPressedFlag;
     }
@@ -36,11 +35,11 @@ public class AddCool extends AppCompatActivity {
         Button popup = (Button) findViewById(R.id.addCoolPopUp);
         popup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), CoolPopUp.class);
-                addButtonPressedFlag = true;
-                startActivity(nextScreen);
-                finish();
+            // Starting a new Intent.
+            Intent nextScreen = new Intent(getApplicationContext(), CoolPopUp.class);
+            addButtonPressedFlag = true;
+            startActivity(nextScreen);
+            finish();
             }
         });
    }

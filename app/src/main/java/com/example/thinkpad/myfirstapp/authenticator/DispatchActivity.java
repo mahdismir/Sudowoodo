@@ -8,17 +8,15 @@ import com.example.thinkpad.myfirstapp.MainMenuActivity;
 import com.example.thinkpad.myfirstapp.R;
 import com.parse.ParseUser;
 
-
 /**
  * This activity checks to see whether or not a user is already logged in when they start the app.
  * First checks the ParseUser object to see if there's a user logged in, if there is, then we
  * display the main menu while loading up users plants. Otherwise we ask them to login.
  */
 
-
 public class DispatchActivity extends AppCompatActivity {
 
-    //Setting the flag to true for testing.
+    // Flag for testing.
     boolean logInFlag;
 
 
@@ -40,9 +38,10 @@ public class DispatchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dispatch);
 
-        //Checking if there is current user info.
+        // Checking if there is current user info.
         if(ParseUser.getCurrentUser() != null){
-            // Start an intent for the logged in activity
+
+            // Start an intent for the logged in activity.
             startActivity(new Intent(this, MainMenuActivity.class));
 
             //Setting the flag to true for testing.

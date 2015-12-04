@@ -31,31 +31,30 @@ public class TropicalPopUp extends AppCompatActivity {
         int height = dm.heightPixels;
 
         getWindow().setLayout((int) (width * .8), (int) (height * .6));
+
+
+        // CANCEL BUTTON
         Button cancelbutton = (Button) findViewById(R.id.CancelonPopUpTropical);
         cancelbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), AddTropical.class);
-                finish();
-
+            Intent nextScreen = new Intent(getApplicationContext(), AddTropical.class);
+            finish();
             }
         });
 
 
+        // ADD BUTTON
         Button addPlantButton = (Button) findViewById(R.id.AddonPopUpTropical);
         addPlantButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0){
-                Intent nextScreen = new Intent(getApplicationContext(), ParseAddPlant.class);
-                //get the string from
-                EditText editNickname = (EditText)findViewById(R.id.plant_nickname);
-                String plantNickname = editNickname.getText().toString();
-                nextScreen.putExtra("plantNickname", plantNickname);
-                nextScreen.putExtra("plantType", "Tropical");
-                startActivity(nextScreen);
-                finish();
+            Intent nextScreen = new Intent(getApplicationContext(), ParseAddPlant.class);
+            EditText editNickname = (EditText)findViewById(R.id.plant_nickname);
+            String plantNickname = editNickname.getText().toString();
+            nextScreen.putExtra("plantNickname", plantNickname);
+            nextScreen.putExtra("plantType", "Tropical");
+            startActivity(nextScreen);
+            finish();
             }
         });
-
     }
-
 }

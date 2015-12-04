@@ -9,7 +9,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.thinkpad.myfirstapp.authenticator.LoginActivity"
     android:background="#994c00">
-    <!--tools:showIn="@layout/activity_login"-->
 
     <EditText
         android:id="@+id/username"
@@ -49,9 +48,5 @@
         android:text="Sign In"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
-
-
-
-
 
 </RelativeLayout>

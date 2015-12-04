@@ -29,12 +29,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*************************************************/
-        /**************FORCE PORTRAIT MODE****************/
-        /*************************************************/
-        //Changed all of the activities in the manifest
-        //to only display in portrait mode. (See activity manifest file)
-        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        /*****************************************/
+        /********** FORCE PORTRAIT MODE **********/
+        /*****************************************/
+        //Changed all of the activities in the manifest to only display in portrait mode. (See activity manifest file)
         setContentView(R.layout.activity_my);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -52,8 +51,9 @@ public class MainActivity extends AppCompatActivity {
             editor.commit();
             alarmMethod();
         }
-
     }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -61,14 +61,14 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        // Handle action bar item clicks here. The action bar will automatically handle clicks on
+        // the Home/Up button, so long as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        // noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             ParseUser.getCurrentUser().logOut();
             startActivity(new Intent(MainActivity.this, DispatchActivity.class));
@@ -78,18 +78,17 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**************************************************/
-    /***********DISPLAY NOTIFICATIONS ACTIVITY*********/
-    /**************************************************/
 
+    /****************************************************/
+    /********** DISPLAY NOTIFICATIONS ACTIVITY **********/
+    /****************************************************/
     private void alarmMethod(){
 
         Long alertTime = new GregorianCalendar().getTimeInMillis()+5*1000;
 
         Intent alertIntent = new Intent(this, AlertReceiver.class);
 
-        AlarmManager alarmManager = (AlarmManager)
-                getSystemService(Context.ALARM_SERVICE);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
         alertIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 

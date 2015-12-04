@@ -26,5 +26,4 @@ public class testResult2 extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
 }

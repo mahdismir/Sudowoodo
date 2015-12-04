@@ -32,31 +32,27 @@ public class DesertPopUp extends AppCompatActivity {
 
         getWindow().setLayout((int) (width * .8), (int) (height * .6));
 
+        // CANCEL BUTTON
         Button cancelbutton = (Button) findViewById(R.id.CancelOnPopUpDesert);
         cancelbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), AddDesert.class);
-                finish();
-
+            Intent nextScreen = new Intent(getApplicationContext(), AddDesert.class);
+            finish();
             }
         });
 
+        // ADD BUTTON
         Button addPlantButton = (Button) findViewById(R.id.AddonPopUpDesert);
         addPlantButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0){
-                // Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), ParseAddPlant.class);
-                //get the string from
-                EditText editNickname = (EditText)findViewById(R.id.plant_nickname);
-                String plantNickname = editNickname.getText().toString();
-                nextScreen.putExtra("plantNickname", plantNickname);
-                nextScreen.putExtra("plantType", "Desert");
-                startActivity(nextScreen);
-                finish();
+            Intent nextScreen = new Intent(getApplicationContext(), ParseAddPlant.class);
+            EditText editNickname = (EditText)findViewById(R.id.plant_nickname);
+            String plantNickname = editNickname.getText().toString();
+            nextScreen.putExtra("plantNickname", plantNickname);
+            nextScreen.putExtra("plantType", "Desert");
+            startActivity(nextScreen);
+            finish();
             }
         });
-
     }
-
 }

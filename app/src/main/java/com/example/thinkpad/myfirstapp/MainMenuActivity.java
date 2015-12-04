@@ -34,77 +34,63 @@ public class MainMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
-        /********************************************/
-        /************ WEATHER BUTTON ****************/
-        /********************************************/
+
+        /************************************/
+        /********** WEATHER BUTTON **********/
+        /************************************/
         Button btnWeatherScreen = (Button) findViewById(R.id.btnWeatherScreen);
         btnWeatherScreen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-
-                // Starting a new Intent and starting the activity.
-                Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
-                startActivity(nextScreen);
+            Intent nextScreen = new Intent(getApplicationContext(), WeatherActivity.class);
+            startActivity(nextScreen);
             }
         });
 
 
-        /*******************************************/
-        /************ ADD A PLANT BUTTON ***********/
-        /*******************************************/
+        /****************************************/
+        /********** ADD A PLANT BUTTON **********/
+        /****************************************/
         Button btnAddPlant = (Button) findViewById(R.id.btnAddPlant);
         btnAddPlant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 
-                // Setting the flag to true for testing.
-                addPlantButtonFlag = true;
+            // Setting the flag to true for testing.
+            addPlantButtonFlag = true;
 
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), AddPlantMenu.class);
-                startActivity(nextScreen);
-
+            // Starting a new Intent.
+            Intent nextScreen = new Intent(getApplicationContext(), AddPlantMenu.class);
+            startActivity(nextScreen);
             }
         });
-        /****************************************************/
-        /************Watering Schedule Button****************/
-        /****************************************************/
+
+
+        /**********************************************/
+        /********** WATERING SCHEDULE BUTTON **********/
+        /**********************************************/
         Button btnWateringScheduleActivity = (Button) findViewById(R.id.wateringSchedule);
         btnWateringScheduleActivity.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), WateringScheduleActivity.class);
-
-                //Sending data to another Activity
-                //nextScreen.putExtra("name", inputName.getText().toString());
-                //nextScreen.putExtra("email", inputEmail.getText().toString());
-
-                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
-
-                startActivity(nextScreen);
-
+            Intent nextScreen = new Intent(getApplicationContext(), WateringScheduleActivity.class);
+            startActivity(nextScreen);
             }
         });
-        /*********************************************/
-        /************Plant List Button****************/
-        /*********************************************/
+
+
+        /***************************************/
+        /********** PLANT LIST BUTTON **********/
+        /***************************************/
         Button btnPlantListActivity = (Button) findViewById(R.id.plantList);
         btnPlantListActivity.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), PlantListActivity.class);
-                //Sending data to another Activity
-                //nextScreen.putExtra("name", inputName.getText().toString());
-                //nextScreen.putExtra("email", inputEmail.getText().toString());
-
-                //Log.e("n", inputName.getText() + "." + inputEmail.getText());
-
-                startActivity(nextScreen);
-
+            Intent nextScreen = new Intent(getApplicationContext(), PlantListActivity.class);
+            startActivity(nextScreen);
             }
         });
 
-        /*********************************************/
-        /************Test Button****************/
-        /*********************************************/
+
+        /*********************************/
+        /********** TEST BUTTON **********/
+        /*********************************/
         Button btnTest = (Button) findViewById(R.id.test);
         btnTest.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
@@ -112,33 +98,22 @@ public class MainMenuActivity extends AppCompatActivity {
                 testAddCoolScenario testingAddCoolObj = new testAddCoolScenario();
                 testingAddCoolObj.testAddCoolValid();
 
+                // If all tests pass, the result will be true. Inform the user they passed test.
                 if(testingAddCoolObj.getResult()) {
-                    //Starting a new Intent
                     Intent nextScreen1 = new Intent(getApplicationContext(), testResult1.class);
                     startActivity(nextScreen1);
                 }
-                else {
+                else { // Else they are informed they didn't pass the test.
                     Intent nextScreen2 = new Intent(getApplicationContext(), testResult2.class);
                     startActivity(nextScreen2);
                 }
             }
         });
-
-
     }
 
-    public void sendMessage1(View view) {
-    }
-
-    public void sendMessage2(View view) {
-    }
-
-    public void sendMessage3(View view) {
-    }
-
-    public void sendMessage4(View view) {
-    }
-
-
+    public void sendMessage1(View view) {}
+    public void sendMessage2(View view) {}
+    public void sendMessage3(View view) {}
+    public void sendMessage4(View view) {}
+    public void sendMessage5(View view) {}
 }
-

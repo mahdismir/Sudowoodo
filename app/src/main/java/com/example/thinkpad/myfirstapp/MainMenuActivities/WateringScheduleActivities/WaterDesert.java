@@ -25,6 +25,7 @@ public class WaterDesert extends AppCompatActivity {
 
         int width = dm.widthPixels;
         int height = dm.heightPixels;
+
         getWindow().setLayout((int) (width * .6), (int) (height * .4));
 
         Button Closebtn = (Button) findViewById(R.id.close);
@@ -34,5 +35,4 @@ public class WaterDesert extends AppCompatActivity {
             }
         });
     }
-
 }

@@ -10,17 +10,13 @@ public class testAddCoolScenario {
 
     boolean result = false;
 
+    // CHECK THIS LOGIC TMRW, take out if statement.
     public void testAddCoolValid(){
-        if(result)
-            result = givenUserIsLoggedIn();
-        if(result)
-            result = whenUserClickToAddPlant();
-        if(result)
-            result = thenAddPlantMenuComesUp();
-        if(result)
-            result = whenUserClicksOnAdd();
-        if(result)
-            result = thenThePopUpComesUpAndPlantIsAdded();
+        result = givenUserIsLoggedIn();
+        if(result) { result = whenUserClickToAddPlant(); }
+        if(result) { result = thenAddPlantMenuComesUp(); }
+        if(result) { result = whenUserClicksOnAdd(); }
+        if(result) { result = thenThePopUpComesUpAndPlantIsAdded();}
     }
 
     // Accessor function.

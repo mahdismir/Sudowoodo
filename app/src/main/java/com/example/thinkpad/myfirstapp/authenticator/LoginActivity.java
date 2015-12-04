@@ -15,6 +15,7 @@ import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
+    // These are the fields to be filled.
     private EditText usernameView;
     private EditText passwordView;
 
@@ -27,57 +28,58 @@ public class LoginActivity extends AppCompatActivity {
         usernameView = (EditText) findViewById(R.id.username);
         passwordView = (EditText) findViewById(R.id.password);
 
-        // Set up the submit button click handler
+        // Set up the submit button click handler.
         findViewById(R.id.action_button).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                // Validate the log in data.
-                boolean validationError = false;
-                StringBuilder validationErrorMessage =
-                        new StringBuilder(getResources().getString(R.string.error_intro));
-                if (isEmpty(usernameView)) {
-                    validationError = true;
-                    validationErrorMessage.append(getResources().getString(R.string.error_blank_username));
-                }
-                if (isEmpty(passwordView)) {
-                    if (validationError) {
-                        validationErrorMessage.append(getResources().getString(R.string.error_join));
-                    }
-                    validationError = true;
-                    validationErrorMessage.append(getResources().getString(R.string.error_blank_password));
-                }
-                validationErrorMessage.append(getResources().getString(R.string.error_end));
-
-                // If there is a validation error, display the error
+            // Validate the log in data.
+            boolean validationError = false;
+            StringBuilder validationErrorMessage = new StringBuilder(getResources().getString(R.string.error_intro));
+            if (isEmpty(usernameView)) {
+                validationError = true;
+                validationErrorMessage.append(getResources().getString(R.string.error_blank_username));
+            }
+            if (isEmpty(passwordView)) {
                 if (validationError) {
-                    Toast.makeText(LoginActivity.this, validationErrorMessage.toString(), Toast.LENGTH_LONG)
-                            .show();
-                    return;
+                    validationErrorMessage.append(getResources().getString(R.string.error_join));
                 }
+                validationError = true;
+                validationErrorMessage.append(getResources().getString(R.string.error_blank_password));
+            }
+            validationErrorMessage.append(getResources().getString(R.string.error_end));
 
-                // Set up a progress dialog.
-                final ProgressDialog dlg = new ProgressDialog(LoginActivity.this);
-                dlg.setTitle("Please wait.");
-                dlg.setMessage("Logging in.  Please wait.");
-                dlg.show();
-                // Call the Parse login method
-                ParseUser.logInInBackground(usernameView.getText().toString(), passwordView.getText()
-                        .toString(), new LogInCallback() {
+            // If there is a validation error, display the error.
+            if (validationError) {
+                Toast.makeText(LoginActivity.this, validationErrorMessage.toString(), Toast.LENGTH_LONG)
+                .show();
+                return;
+            }
+
+            // Set up a progress dialog.
+            final ProgressDialog dlg = new ProgressDialog(LoginActivity.this);
+            dlg.setTitle("Please wait.");
+            dlg.setMessage("Logging in.  Please wait.");
+            dlg.show();
+
+            // Call the Parse login method.
+            ParseUser.logInInBackground(usernameView.getText().toString(), passwordView.getText()
+            .toString(), new LogInCallback() {
 
                     @Override
                     public void done(ParseUser user, ParseException e) {
-                        dlg.dismiss();
-                        if (e != null) {
-                            // Show the error message
-                            Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                        } else {
-                            // Start an intent for the dispatch activity
-                            Intent intent = new Intent(LoginActivity.this, DispatchActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                        }
+                dlg.dismiss();
+                if (e != null) {
+                    // Show the error message.
+                    Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+                else {
+                    // Start an intent for the dispatch activity.
+                    Intent intent = new Intent(LoginActivity.this, DispatchActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
                     }
-                });
+            });
             }
         });
     }
@@ -85,10 +87,9 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isEmpty(EditText etText) {
         if (etText.getText().toString().trim().length() > 0) {
             return false;
-        } else {
+        }
+        else{
             return true;
         }
     }
-
-
 }

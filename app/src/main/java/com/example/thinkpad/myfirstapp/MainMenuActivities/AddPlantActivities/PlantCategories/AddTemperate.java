@@ -21,12 +21,10 @@ public class AddTemperate extends AppCompatActivity {
         Button popup = (Button) findViewById(R.id.addTemperatePopUp);
         popup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), TemperatePopUp.class);
-                startActivity(nextScreen);
-
+            // Starting a new Intent.
+            Intent nextScreen = new Intent(getApplicationContext(), TemperatePopUp.class);
+            startActivity(nextScreen);
             }
         });
     }
-
 }

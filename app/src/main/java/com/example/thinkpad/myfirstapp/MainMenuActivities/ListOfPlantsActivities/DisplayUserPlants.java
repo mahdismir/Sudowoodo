@@ -8,10 +8,11 @@ import android.widget.TextView;
 import com.example.thinkpad.myfirstapp.R;
 
 public class DisplayUserPlants extends Activity {
-    // Declare Variables
+
     String nickname;
     String type;
     String lastWatered;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -20,11 +21,11 @@ public class DisplayUserPlants extends Activity {
         setContentView(R.layout.activity_single_item_view);
 
         Intent i = getIntent();
-        // Get the result of rank
+        // Get the result of rank.
         nickname = i.getStringExtra("nickname");
-        // Get the result of country
+        // Get the result of country.
         type = i.getStringExtra("type");
-        // Get the result of population
+        // Get the result of population.
         lastWatered = i.getStringExtra("lastWatered");
 
 
@@ -38,8 +39,5 @@ public class DisplayUserPlants extends Activity {
         txtnickname.setText(nickname);
         txttype.setText(type);
         txtlastWatered.setText(lastWatered);
-
-
-
     }
 }

@@ -2,9 +2,6 @@ package com.example.thinkpad.myfirstapp.data;
 
 import org.json.JSONObject;
 
-/**
- * Created by mitch_000 on 11/4/2015.
- */
 public class Channel implements JSONPopulator {
     private Units units;
     private Item item;
@@ -12,7 +9,6 @@ public class Channel implements JSONPopulator {
     public Units getUnits() {
         return units;
     }
-
     public Item getItem() {
         return item;
     }

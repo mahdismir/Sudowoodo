@@ -17,11 +17,8 @@ public class CoolPopUp extends AppCompatActivity {
 
     boolean addButtonPressedFromPopUpFlag;
 
-
     // Accessor Method
-    public boolean getAddButtonPressedFromPopUpFlag(){
-        return addButtonPressedFromPopUpFlag;
-    }
+    public boolean getAddButtonPressedFromPopUpFlag(){ return addButtonPressedFromPopUpFlag;}
 
     // Helper function for testing.
     public void callOnCreate(){
@@ -43,30 +40,28 @@ public class CoolPopUp extends AppCompatActivity {
 
         getWindow().setLayout((int)(width*.8),(int)(height*.6));
 
+
+        // CANCEL BUTTON
         Button cancelbutton = (Button) findViewById(R.id.CancelonPopUpCool);
         cancelbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), AddCool.class);
-                finish();
-
+            Intent nextScreen = new Intent(getApplicationContext(), AddCool.class);
+            finish();
             }
         });
 
-
+        // ADD BUTTON
         Button addPlantButton = (Button) findViewById(R.id.AddonPopUpCool);
         addPlantButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0){
-                // Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), ParseAddPlant.class);
-                //get the string from
-                EditText editNickname = (EditText)findViewById(R.id.plant_nickname);
-                String plantNickname = editNickname.getText().toString();
-                nextScreen.putExtra("plantNickname", plantNickname);
-                nextScreen.putExtra("plantType", "Cool");
-                startActivity(nextScreen);
-                addButtonPressedFromPopUpFlag = true;
-                finish();
+            Intent nextScreen = new Intent(getApplicationContext(), ParseAddPlant.class);
+            EditText editNickname = (EditText)findViewById(R.id.plant_nickname);
+            String plantNickname = editNickname.getText().toString();
+            nextScreen.putExtra("plantNickname", plantNickname);
+            nextScreen.putExtra("plantType", "Cool");
+            startActivity(nextScreen);
+            addButtonPressedFromPopUpFlag = true;
+            finish();
             }
         });
     }

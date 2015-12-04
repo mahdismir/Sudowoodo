@@ -20,20 +20,17 @@ public class SignUpOrLoginActivity extends AppCompatActivity {
         // Log in button click handler.
         findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Starts an intent of the log in activity.
-                startActivity(new Intent(SignUpOrLoginActivity.this, LoginActivity.class));
+            // Starts an intent of the log in activity.
+            startActivity(new Intent(SignUpOrLoginActivity.this, LoginActivity.class));
             }
         });
 
-        // Sign up button click handler
+        // Sign up button click handler.
         findViewById(R.id.signup).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Starts an intent for the sign up activity
-                startActivity(new Intent(SignUpOrLoginActivity.this, SignUpActivity.class));
+            // Starts an intent for the sign up activity
+            startActivity(new Intent(SignUpOrLoginActivity.this, SignUpActivity.class));
             }
         });
-
     }
-
-
 }

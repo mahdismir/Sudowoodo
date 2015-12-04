@@ -17,7 +17,6 @@ public class AddPlantMenu extends AppCompatActivity {
 
     boolean addCoolPlantFlag;
 
-
     // Accessor Method
     public boolean getAddCoolPlantFlag(){
         return addCoolPlantFlag;
@@ -43,8 +42,6 @@ public class AddPlantMenu extends AppCompatActivity {
         Button btnAddTemperate = (Button) findViewById(R.id.temperatebtn);
         btnAddTemperate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-
-            //Starting a new Intent
             Intent nextScreen = new Intent(getApplicationContext(), AddTemperate.class);
             startActivity(nextScreen);
             }
@@ -54,8 +51,6 @@ public class AddPlantMenu extends AppCompatActivity {
         Button btnAddDesert = (Button) findViewById(R.id.desertbtn);
         btnAddDesert.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-
-             //Starting a new Intent
              Intent nextScreen = new Intent(getApplicationContext(), AddDesert.class);
              startActivity(nextScreen);
             }
@@ -79,8 +74,6 @@ public class AddPlantMenu extends AppCompatActivity {
         Button btnAddTropical = (Button) findViewById(R.id.Tropicalbtn);
         btnAddTropical.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-
-            //Starting a new Intent
             Intent nextScreen = new Intent(getApplicationContext(), AddTropical.class);
             startActivity(nextScreen);
             }

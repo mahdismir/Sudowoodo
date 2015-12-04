@@ -21,13 +21,10 @@ public class AddDesert extends AppCompatActivity {
         Button popup = (Button) findViewById(R.id.addDesertPopUp);
         popup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                //Starting a new Intent
-                Intent nextScreen = new Intent(getApplicationContext(), DesertPopUp.class);
-                startActivity(nextScreen);
-
+            // Starting a new Intent.
+            Intent nextScreen = new Intent(getApplicationContext(), DesertPopUp.class);
+            startActivity(nextScreen);
             }
         });
-
     }
-
 }

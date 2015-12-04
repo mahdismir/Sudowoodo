@@ -2,9 +2,6 @@ package com.example.thinkpad.myfirstapp.data;
 
 import org.json.JSONObject;
 
-/**
- * Created by mitch_000 on 11/4/2015.
- */
 public class Condition implements JSONPopulator {
     private int code;
     private int temperature;
@@ -13,11 +10,9 @@ public class Condition implements JSONPopulator {
     public int getCode() {
         return code;
     }
-
     public int getTemperature() {
         return temperature;
     }
-
     public String getDescription() {
         return description;
     }

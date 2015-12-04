@@ -28,15 +28,11 @@ public class WaterTemperate extends AppCompatActivity {
 
         getWindow().setLayout((int) (width * .6), (int) (height * .4));
 
-
         Button Closebtn = (Button) findViewById(R.id.close);
         Closebtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 finish();
             }
         });
-
-
     }
-
 }

@@ -34,7 +34,5 @@ public class WaterTropical extends AppCompatActivity {
                 finish();
             }
         });
-
     }
-
 }

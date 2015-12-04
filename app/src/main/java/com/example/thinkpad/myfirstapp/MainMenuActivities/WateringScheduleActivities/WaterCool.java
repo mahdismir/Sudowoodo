@@ -35,8 +35,5 @@ public class WaterCool extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
-
 }

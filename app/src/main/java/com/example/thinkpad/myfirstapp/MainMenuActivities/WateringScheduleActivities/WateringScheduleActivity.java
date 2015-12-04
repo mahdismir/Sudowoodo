@@ -23,43 +23,40 @@ public class WateringScheduleActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+        // TEMPERATE BUTTON
         Button WSbtnAddTemperate = (Button) findViewById(R.id.WStemperatebtn);
         WSbtnAddTemperate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                Intent nextScreen = new Intent(getApplicationContext(), WaterTemperate.class);
-                startActivity(nextScreen);
-
+            Intent nextScreen = new Intent(getApplicationContext(), WaterTemperate.class);
+            startActivity(nextScreen);
             }
         });
 
+        // DESERT BUTTON
         Button WSbtnAddDesert = (Button) findViewById(R.id.WSdesertbtn);
         WSbtnAddDesert.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                Intent nextScreen = new Intent(getApplicationContext(), WaterDesert.class);
-                startActivity(nextScreen);
-
+            Intent nextScreen = new Intent(getApplicationContext(), WaterDesert.class);
+            startActivity(nextScreen);
             }
         });
 
-
+        // COOL BUTTON
         Button WSbtnAddCool = (Button) findViewById(R.id.WScoolbtn);
         WSbtnAddCool.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                Intent nextScreen = new Intent(getApplicationContext(), WaterCool.class);
-                startActivity(nextScreen);
-
+            Intent nextScreen = new Intent(getApplicationContext(), WaterCool.class);
+            startActivity(nextScreen);
             }
         });
 
-
+        // TROPICAL BUTTON
         Button WSbtnAddTropical = (Button) findViewById(R.id.WSTropicalbtn);
         WSbtnAddTropical.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                Intent nextScreen = new Intent(getApplicationContext(), WaterTropical.class);
-                startActivity(nextScreen);
-
+            Intent nextScreen = new Intent(getApplicationContext(), WaterTropical.class);
+            startActivity(nextScreen);
             }
         });
     }
-
 }

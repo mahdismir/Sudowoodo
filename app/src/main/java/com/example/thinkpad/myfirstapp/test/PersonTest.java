@@ -17,7 +17,5 @@ public class PersonTest extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Person currentPerson = new Person();
         currentPerson.getPlantsFromParse();
-
     }
-
 }
