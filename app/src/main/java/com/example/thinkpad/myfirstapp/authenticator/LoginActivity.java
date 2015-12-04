@@ -30,7 +30,8 @@ public class LoginActivity extends AppCompatActivity {
         // Set up the submit button click handler
         findViewById(R.id.action_button).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                // Validate the log in data
+
+                // Validate the log in data.
                 boolean validationError = false;
                 StringBuilder validationErrorMessage =
                         new StringBuilder(getResources().getString(R.string.error_intro));
@@ -54,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                // Set up a progress dialog
+                // Set up a progress dialog.
                 final ProgressDialog dlg = new ProgressDialog(LoginActivity.this);
                 dlg.setTitle("Please wait.");
                 dlg.setMessage("Logging in.  Please wait.");

@@ -12,6 +12,21 @@ import com.example.thinkpad.myfirstapp.R;
 
 public class AddCool extends AppCompatActivity {
 
+    boolean addButtonPressedFlag;
+
+
+    // Accessor Method
+    public boolean getAddButtonPressedFlag(){
+        return addButtonPressedFlag;
+    }
+
+    // Helper function for testing.
+    public void callOnCreate(){
+        Bundle test = new Bundle();
+        this.onCreate(test);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,14 +38,10 @@ public class AddCool extends AppCompatActivity {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), CoolPopUp.class);
+                addButtonPressedFlag = true;
                 startActivity(nextScreen);
-
-
                 finish();
-
             }
         });
-
    }
-
 }

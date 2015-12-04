@@ -17,10 +17,10 @@ public class SignUpOrLoginActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_or_login);
-        // Log in button click handler
+        // Log in button click handler.
         findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Starts an intent of the log in activity
+                // Starts an intent of the log in activity.
                 startActivity(new Intent(SignUpOrLoginActivity.this, LoginActivity.class));
             }
         });

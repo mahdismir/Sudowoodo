@@ -85,6 +85,9 @@
     <string name="title_activity_single_item_view">SingleItemView</string>
     <string name="title_activity_listview_main">ListviewMain</string>
     <string name="title_activity_person_test">PersonTest</string>
+    <string name="title_activity_test_result1">testResult1</string>
+    <string name="title_activity_test_result2">testResult2</string>
+    <string name="title_activity_test_add_cool_scenario">testAddCoolScenario</string>
 
 </resources>
 

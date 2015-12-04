@@ -15,6 +15,21 @@ import com.example.thinkpad.myfirstapp.R;
 
 public class CoolPopUp extends AppCompatActivity {
 
+    boolean addButtonPressedFromPopUpFlag;
+
+
+    // Accessor Method
+    public boolean getAddButtonPressedFromPopUpFlag(){
+        return addButtonPressedFromPopUpFlag;
+    }
+
+    // Helper function for testing.
+    public void callOnCreate(){
+        Bundle test = new Bundle();
+        this.onCreate(test);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,12 +65,9 @@ public class CoolPopUp extends AppCompatActivity {
                 nextScreen.putExtra("plantNickname", plantNickname);
                 nextScreen.putExtra("plantType", "Cool");
                 startActivity(nextScreen);
+                addButtonPressedFromPopUpFlag = true;
                 finish();
-
             }
         });
-
-
     }
-
 }

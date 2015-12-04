@@ -33,7 +33,7 @@
             android:background="#07e0f0"
             android:textStyle="bold|italic"
             android:onClick="sendMessage1"
-            android:layout_weight=".25" />
+            android:layout_weight=".22" />
 
         <Button
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             android:background="#f06007"
             android:textStyle="bold|italic"
             android:onClick="sendMessage2"
-            android:layout_weight=".25" />
+            android:layout_weight=".22" />
 
         <Button
             android:layout_width="match_parent"
@@ -54,7 +54,7 @@
             android:background="#f6f608"
             android:textStyle="bold|italic"
             android:onClick="sendMessage3"
-            android:layout_weight=".25" />
+            android:layout_weight=".22" />
 
         <Button
             android:layout_width="match_parent"
@@ -64,7 +64,18 @@
             android:background="#2d9b08"
             android:textStyle="bold|italic"
             android:onClick="sendMessage4"
-            android:layout_weight=".25" />
+            android:layout_weight=".22" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Test Scenario"
+            android:textColor="#000000"
+            android:id="@+id/test"
+            android:background="#FFFFFF"
+            android:textStyle="bold|italic"
+            android:onClick="sendMessage5"
+            android:layout_weight=".09" />
 
     </LinearLayout>
 

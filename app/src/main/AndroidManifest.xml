@@ -4,8 +4,6 @@
 
     <uses-sdk android:minSdkVersion="11" />
 
-
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -16,8 +14,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
         android:name=".authenticator.ParseApplication"
@@ -27,9 +24,9 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-
-
-        <receiver  android:process=":remote" android:name=".AlertReceiver"></receiver>
+        <receiver
+            android:name=".AlertReceiver"
+            android:process=":remote" />
         /* TITLE SCREEN */
         <activity
             android:name=".MainActivity"
@@ -160,13 +157,11 @@
                 android:value=".MainMenuActivities.AddPlantActivities.AddPlantMenu" />
         </activity>
         /* TEST PERSON ACTIVITY */
-
         <activity
             android:name=".test.PersonTest"
             android:label="@string/title_activity_person_test"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-
         <activity
             android:name=".MainMenuActivities.AddPlantActivities.AddPlantPopUps.CoolPopUp"
             android:label="@string/title_activity_cool_pop_up"
@@ -255,7 +250,33 @@
             android:label="@string/title_activity_single_item_view"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-
+        <activity
+            android:name=".testResult1"
+            android:label="@string/title_activity_test_result1"
+            android:parentActivityName=".MainMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".testResult2"
+            android:label="@string/title_activity_test_result2"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".testAddCoolScenario"
+            android:label="@string/title_activity_test_add_cool_scenario"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thinkpad.myfirstapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
