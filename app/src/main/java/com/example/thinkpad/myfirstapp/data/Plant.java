@@ -52,41 +52,4 @@ public class Plant {
         return nickname;
     }
     public String getOwner() { return owner;}
-
-
-    // Creating a function that allows a plant to be uploaded to Parse.
-    public void uploadPlant(){
-
-        //Creating the Parse Object that will be the plant that will upload to Parse.com
-        ParseObject uploadingPlant = new ParseObject("uploadedPlants");
-        uploadingPlant.put("Nickname",this.getType());
-        uploadingPlant.put("Type",this.getType());
-        uploadingPlant.put("Owner", this.getOwner());
-        uploadingPlant.put("WateringInterval",this.getWateringInterval());
-        uploadingPlant.put("LastWatered",this.getLastWatered());
-        uploadingPlant.saveInBackground(); // Saves this obj to the server in the background thread.
-    }
-
-
-    // This function will give you a number of how many days you have left to water your plant.
-    // Pre-condition: lastWatered is always less than or equal to wateringInterval.
-    // if we return -1, we are greater than the threshold, don't want to inform the user that they
-    // have -5 days left to water, we want to tell them it's overdue or something.
-    public int numberOfDaysLeftToWater(){
-        if(this.getLastWatered() <= this.getWateringInterval())
-            return this.getWateringInterval() - this.getLastWatered();
-        else{
-            return -1;
-        }
-    }
-
-    // Function will increment the lastWatered interval (this is our counter).
-    public void incrementDaily() {
-            lastWatered++;
-    }
-
-    // Resets the lastWatered count to 0. This is suppose to happen after a person waters a plant.
-    public void reset(){
-        lastWatered = 0;
-    }
 }

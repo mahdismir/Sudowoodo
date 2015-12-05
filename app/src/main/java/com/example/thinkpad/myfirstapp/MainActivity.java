@@ -23,9 +23,6 @@ import java.util.GregorianCalendar;
 public class MainActivity extends AppCompatActivity {
 
 
-    public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

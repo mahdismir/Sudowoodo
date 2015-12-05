@@ -10,7 +10,7 @@ public class testAddCoolScenario {
 
     boolean result = false;
 
-    // CHECK THIS LOGIC TMRW, take out if statement.
+    // Appropriate tests being called.
     public void testAddCoolValid(){
         result = givenUserIsLoggedIn();
         if(result) { result = whenUserClickToAddPlant(); }
